@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<style type="text/css" media="screen">
+    #editor {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+<div id="editor"></div>
+
+
+
+<button id="btn" class="pull-right">Hit Me!!!!!!!!!!!</button>
+{% load static %}
+<script src="{% static 'compiler/src-min/ace.js' %}" type="text/javascript" charset="utf-8"></script>
+
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/python");
+
+</script>
+<script type="text/javascript">
+    $("#btn").on("click",function () {
+        var source = editor.getValue();
+        $.ajax(
+            {
+                type:"POST",
+    url: "http://api.hackerrank.com/checker/submission.json",
+    data:{
+
+                        source: source,
+    lang: 5,
+    testcases:   "['']" ,
+
+                    api_key: "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e",
+    wait: true,
+    callbackUrl: 'http://localhost:8000/',
+    format: 'json'},
+    success:function (request) {
+         alert(request.result.stdout)
+    }
+            })
+
+
+
+    })
+
+
+</script>
+{% endblock %}
