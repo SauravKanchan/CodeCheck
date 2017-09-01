@@ -113,7 +113,9 @@
                         $("#output").html(request.result.stdout);
                     }else{
                         alert(request.result.c);
-                        $("#output").html((request.result.compilemessage));
+                        var str = (request.result.compilemessage).toString();
+                        str=decodeURIComponent(escape(str));
+                        $("#output").html(str);
                     }
                     $("#btn").html("Submit");
                     $.ajax({
