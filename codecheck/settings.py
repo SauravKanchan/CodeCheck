@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ace_overlay',
 
     'compiler',
 ]
@@ -127,5 +126,4 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
 ]
 
-
-HACKERRANK_API_KEY = 'hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e'  #your API-KEY here
+DEFAULT_POINTS = 100

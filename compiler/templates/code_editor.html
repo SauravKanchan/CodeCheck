@@ -9,6 +9,7 @@
         left: 0;
     }
 </style>
+
 <div id="editor"></div>
     <select id="language" data-placeholder="Choose a Language..." class="select pull-right" tabindex="1">
         <option value="1">c</option>
@@ -85,34 +86,6 @@
 
 
     });
-  var escapable = /[\\\"\x00-\x1f\x7f-\uffff]/g,
-        meta = {    // table of character substitutions
-            '\b': '\\b',
-            '\t': '\\t',
-            '\n': '\\n',
-            '\f': '\\f',
-            '\r': '\\r',
-            '"' : '\\"',
-            '\\': '\\\\'
-        };
-
-    function quote(string) {
-
-// If the string contains no control characters, no quote characters, and no
-// backslash characters, then we can safely slap some quotes around it.
-// Otherwise we must also replace the offending characters with safe escape
-// sequences.
-
-        escapable.lastIndex = 0;
-        return escapable.test(string) ?
-            '"' + string.replace(escapable, function (a) {
-                var c = meta[a];
-                return typeof c === 'string' ? c :
-                    '\\u' + ('0000' + a.charCodeAt(0).toString(16)).slice(-4);
-            }) + '"' :
-            '"' + string + '"';
-    }
-
 
     $("#btn").on("click", function () {
         $(this).html("Submiting..... ");
@@ -132,6 +105,8 @@
                     callbackUrl: 'http://localhost:8000/',
                     format: 'json'
                 },
+
+
                 success: function (request) {
                     if(request.result.message == "Success"){
                         alert(request.result.stdout);
@@ -146,6 +121,7 @@
                     })
 
                 },
+
                 failure:function () {
                     alert("Something went wrong please try again");
                     $("#btn").html("Submit");

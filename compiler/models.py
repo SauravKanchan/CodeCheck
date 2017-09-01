@@ -1,5 +1,32 @@
-# from django.db import models
-#
-# # Create your models here.
-# class Template(models.Model):
-#     custom_template = models.CharField(max_length=50000)
+from django.db import models
+from django.conf import settings
+
+class Question(models.Model):
+    title = models.CharField(max_length=400)
+    testcases = models.TextField(max_length=10000)
+    inputs = models.TextField(max_length=50000)
+    points = models.PositiveIntegerField(default=settings.DEFAULT_POINTS)
+    right_count = models.PositiveIntegerField(default=0)
+    wrong_count = models.PositiveIntegerField(default=0)
+    output = models.TextField(max_length=10000)
+
+    def get_percentage_correct(self):
+        return (self.right_count*100)/(self.wrong_count+self.right_count)
+
+    def get_percentage_wrong(self):
+        return 100-self.get_percentage_correct()
+
+    def test(self,output):
+        if output==self.output:
+            self.right_count+=1
+            self.save()
+            return True
+        else:
+            self.wrong_count+=1
+            self.save()
+            return False
+
+
+    def __str__(self):
+        return self.title
+
