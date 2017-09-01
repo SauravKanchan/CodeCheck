@@ -10,41 +10,147 @@
     }
 </style>
 <div id="editor"></div>
+    <select id="language" data-placeholder="Choose a Language..." class="select pull-right" tabindex="1">
+        <option value="1">c</option>
+        <option value="54">fortran</option>
+        <option value="39">smalltalk</option>
+        <option value="3">java</option>
+        <option value="14">bash</option>
+        <option value="15">scala</option>
+        <option value="43">java8</option>
+        <option value="20">javascript</option>
+        <option value="18">lua</option>
+        <option value="44">db2</option>
+        <option value="11">oracle</option>
+        <option value="21">go</option>
+        <option value="8">ruby</option>
+        <option value="9">csharp</option>
+        <option value="36">cobol</option>
+        <option value="38">lolcode</option>
+        <option value="13">clojure</option>
+        <option value="12">haskell</option>
+        <option value="7">php</option>
+        <option value="50">rust</option>
+        <option value="25">pascal</option>
+        <option value="37">visualbasic</option>
+        <option value="2">cpp</option>
+        <option value="46">octave</option>
+        <option value="42">tsql</option>
+        <option value="41">whitespace</option>
+        <option value="32">objectivec</option>
+        <option value="10">mysql</option>
+        <option value="22">d</option>
+        <option value="23">ocaml</option>
+        <option value="51">swift</option>
+        <option value="48">xquery</option>
+        <option value="33">fsharp</option>
+        <option value="31">groovy</option>
+        <option value="26">sbcl</option>
+        <option value="6">perl</option>
+        <option value="49">racket</option>
+        <option value="40">tcl</option>
+        <option value="24">r</option>
+        <option value="5">python</option>
+        <option value="30">python3</option>
+        <option value="16">erlang</option>
+    </select><br><br>
+<button id="btn" class="pull-right btn btn-success">Submit</button>
+<br><br>
+<div id="output" class="well  pull-right">
+    Your output:-
 
+</div>
+<br><br>
 
-
-<button id="btn" class="pull-right">Hit Me!!!!!!!!!!!</button>
 {% load static %}
 <script src="{% static 'compiler/src-min/ace.js' %}" type="text/javascript" charset="utf-8"></script>
 
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/python");
+    var lang=1;
+    editor.getSession().setMode("ace/mode/c_cpp");
 
-</script>
-<script type="text/javascript">
-    $("#btn").on("click",function () {
+    $("#language").change(function () {
+        lang=$(this).val();
+        var l =($("select option:selected").text());
+        if (l=="python" || l=="python3")
+            {editor.getSession().setMode("ace/mode/python");}
+        else if (l=="c"){
+            editor.getSession().setMode("ace/mode/c_cpp");
+        }
+        else{
+            editor.getSession().setMode("ace/mode/"+l);
+        }
+
+
+    });
+  var escapable = /[\\\"\x00-\x1f\x7f-\uffff]/g,
+        meta = {    // table of character substitutions
+            '\b': '\\b',
+            '\t': '\\t',
+            '\n': '\\n',
+            '\f': '\\f',
+            '\r': '\\r',
+            '"' : '\\"',
+            '\\': '\\\\'
+        };
+
+    function quote(string) {
+
+// If the string contains no control characters, no quote characters, and no
+// backslash characters, then we can safely slap some quotes around it.
+// Otherwise we must also replace the offending characters with safe escape
+// sequences.
+
+        escapable.lastIndex = 0;
+        return escapable.test(string) ?
+            '"' + string.replace(escapable, function (a) {
+                var c = meta[a];
+                return typeof c === 'string' ? c :
+                    '\\u' + ('0000' + a.charCodeAt(0).toString(16)).slice(-4);
+            }) + '"' :
+            '"' + string + '"';
+    }
+
+
+    $("#btn").on("click", function () {
+        $(this).html("Submiting..... ");
         var source = editor.getValue();
         $.ajax(
             {
-                type:"POST",
-    url: "http://api.hackerrank.com/checker/submission.json",
-    data:{
+                type: "POST",
+                url: "http://api.hackerrank.com/checker/submission.json",
+                data: {
 
-                        source: source,
-    lang: 5,
-    testcases:   "['']" ,
+                    source: source,
+                    lang: lang,
+                    testcases: "['']",
 
                     api_key: "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e",
-    wait: true,
-    callbackUrl: 'http://localhost:8000/',
-    format: 'json'},
-    success:function (request) {
-         alert(request.result.stdout)
-    }
-            })
+                    wait: true,
+                    callbackUrl: 'http://localhost:8000/',
+                    format: 'json'
+                },
+                success: function (request) {
+                    if(request.result.message == "Success"){
+                        alert(request.result.stdout);
+                        $("#output").html(request.result.stdout);
+                    }else{
+                        alert(request.result.c);
+                        $("#output").html((request.result.compilemessage));
+                    }
+                    $("#btn").html("Submit");
+                    $.ajax({
+//                        url =
+                    })
 
+                },
+                failure:function () {
+                    alert("Something went wrong please try again");
+                    $("#btn").html("Submit");
+                },
+            })
 
 
     })

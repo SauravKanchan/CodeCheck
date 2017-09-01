@@ -6,5 +6,7 @@ def code_editor(request):
     return render(request,'code_editor.html',context)
 
 def result(request):
-    context={}
+    context = {}
+    if request.methode=="POST":
+        pass
     return render(request,'result.html',context)
