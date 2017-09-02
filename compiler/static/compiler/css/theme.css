@@ -1,5 +1,5 @@
 body {
-  padding-top: 70px;
+  
   padding-bottom: 30px;
   background-color:  rgba(231, 231, 231, 0.35) ;
 }
@@ -27,4 +27,9 @@ body {
 ol li.list-group-item { 
     list-style: decimal inside;
     display: list-item;
+}
+
+#editor{
+  height: 500px;
+  
 }

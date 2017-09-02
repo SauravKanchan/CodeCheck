@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"> CodeCheck </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"> Logout </a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+           <div class="panel panel-default">
+			  <div class="panel-heading">Question</div>
+			  <div class="panel-body">{{question.title}}</div>
+		   </div>
+
+		   <div class="panel panel-default">
+			  <div class="panel-heading">Test Cases</div>
+			  <div class="panel-body">
+				  	{% for i in question.testcases %}
+						{{ i|linebreaksbr }}
+					{% endfor %}
+			  </div>
+		   </div>
+
+		   <div class="panel panel-default">
+			  <div class="panel-heading">Inputs</div>
+			  <div class="panel-body">
+				  	{% for i in question.inputs %}
+						{{ i|linebreaksbr }}
+					{% endfor %}
+			  </div>
+		   </div>
+		   
+		   <meta id="data" data-case="{{question.testcases}}">
+
+		   <div class="panel panel-default">
+			  <div class="panel-body">Points: {{question.points}}</div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-body">Right Count: {{question.right_count}}</div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-body">Wrong Count: {{question.wrong_count}}</div>
+			</div>
+          
+        
+        <div class="panel panel-default">
+        <select id="language" data-placeholder="Choose a Language..." class="select pull-right" tabindex="1">
+	        <option value="1">c</option>
+	        <option value="54">fortran</option>
+	        <option value="39">smalltalk</option>
+	        <option value="3">java</option>
+	        <option value="14">bash</option>
+	        <option value="15">scala</option>
+	        <option value="43">java8</option>
+	        <option value="20">javascript</option>
+	        <option value="18">lua</option>
+	        <option value="44">db2</option>
+	        <option value="11">oracle</option>
+	        <option value="21">go</option>
+	        <option value="8">ruby</option>
+	        <option value="9">csharp</option>
+	        <option value="36">cobol</option>
+	        <option value="38">lolcode</option>
+	        <option value="13">clojure</option>
+	        <option value="12">haskell</option>
+	        <option value="7">php</option>
+	        <option value="50">rust</option>
+	        <option value="25">pascal</option>
+	        <option value="37">visualbasic</option>
+	        <option value="2">cpp</option>
+	        <option value="46">octave</option>
+	        <option value="42">tsql</option>
+	        <option value="41">whitespace</option>
+	        <option value="32">objectivec</option>
+	        <option value="10">mysql</option>
+	        <option value="22">d</option>
+	        <option value="23">ocaml</option>
+	        <option value="51">swift</option>
+	        <option value="48">xquery</option>
+	        <option value="33">fsharp</option>
+	        <option value="31">groovy</option>
+	        <option value="26">sbcl</option>
+	        <option value="6">perl</option>
+	        <option value="49">racket</option>
+	        <option value="40">tcl</option>
+	        <option value="24">r</option>
+	        <option value="5">python</option>
+	        <option value="30">python3</option>
+	        <option value="16">erlang</option>
+	    </select><br><br>
+        <div class="panel-body" id="editor"></div>
+		</div>
+		<!-- submit btn -->
+		<button id="btn" class="pull-right btn btn-success">Submit</button>
+         
+		
+		<div class="panel panel-default">
+			  <div class="panel-body">
+			  	<textarea id="testcases" placeholder="Enter your testcases here..." class="form-control" rows="5"></textarea>
+			  </div>
+			</div>
+		
+		<div class="panel panel-default">
+			  <div class="panel-body" id="output">
+			  	Yout output:
+			  </div>
+			</div>
+		<!-- end of row -->
+       </div>
+{% load static %}
+<script src="{% static 'compiler/src-min/ace.js' %}" type="text/javascript" charset="utf-8"></script>
+
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    var lang=1;
+    editor.getSession().setMode("ace/mode/c_cpp");
+
+    $("#language").change(function () {
+        lang=$(this).val();
+        var l =($("select option:selected").text());
+        if (l=="python" || l=="python3")
+            {editor.getSession().setMode("ace/mode/python");}
+        else if (l=="c"){
+            editor.getSession().setMode("ace/mode/c_cpp");
+        }
+        else{
+            editor.getSession().setMode("ace/mode/"+l);
+        }
+
+
+    });
+
+    $("#btn").on("click", function () {
+        $(this).html("Submiting..... ");
+        var source = editor.getValue();
+        var caseData = $("#data").data("case");
+        var test = caseData.split("\n");
+        var myTest = JSON.stringify(test);
+        alert(myTest);
+        $.ajax(
+            {
+                type: "POST",
+                url: "http://api.hackerrank.com/checker/submission.json",
+                data: {
+
+                    source: source,
+                    lang: lang,
+                    testcases:myTest,
+//
+                    api_key: "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e",
+                    wait: true,
+//                    callbackUrl: 'http://localhost:8000/',
+                    format: 'json'
+                },
+
+
+                success: function (request) {
+                    if(request.result.message == "Success"){
+                        $("#output").html(String(request.result.stdout).replace("\n","<br>"));
+                    }else{
+                        alert(request.result.c);
+                        var str = (request.result.compilemessage).toString();
+                        str=decodeURIComponent(escape(str));
+                        $("#output").html(str);
+                    }
+                    $("#btn").html("Submit");
+                    $.ajax({
+//                        url =
+                    })
+
+                },
+
+                error:function (err) {
+                    alert("Something went wrong please try again");
+                    $("#btn").html("Submit");
+                    $("#output").html(err)
+                },
+            })
+
+
+    })
+
+
+</script>
+{% endblock %}
