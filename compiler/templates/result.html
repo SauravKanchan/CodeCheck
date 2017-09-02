@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% endfor %}
+	{% for i in testcases %}
+		{{ i|linebreaksbr }}
+	{% endfor %}
+
 {% endblock %}
