@@ -95,7 +95,8 @@ Try it Yourself »
     $("#btn").on("click", function () {
         $(this).html("Submiting..... ");
         var source = editor.getValue();
-        alert(JSON.stringify($("#testcases").val().split("\n")));
+        var a=($("#testcases").val().split("\n"));
+
         $.ajax(
             {
                 type: "POST",
@@ -104,11 +105,10 @@ Try it Yourself »
 
                     source: source,
                     lang: lang,
-                    testcases:JSON.stringify($("#testcases").val().split("\n")),
+                    testcases:JSON.stringify(a),
 //
                     api_key: "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e",
                     wait: true,
-//                    callbackUrl: 'http://localhost:8000/',
                     format: 'json'
                 },
 

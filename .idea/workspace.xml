@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6e4d4c8-5061-4cc8-b3cd-c2e99d19cc3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compiler/static/compiler/js/jquery.ajax-cross-origin.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiler/templates/code_editor.html" afterPath="$PROJECT_DIR$/compiler/templates/code_editor.html" />
     </list>
@@ -66,8 +65,8 @@
       <file leaf-file-name="code_editor.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compiler/templates/code_editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="98" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -947,8 +946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/compiler/templates/code_editor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="98" selection-end-column="0" />
           <folding />
         </state>
       </provider>
