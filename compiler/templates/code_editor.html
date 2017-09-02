@@ -62,7 +62,12 @@
 
 </div>
 <br><br>
-
+<div>
+    <br><br><br>
+<textarea id="testcases" placeholder="Enter your testcases here..." class="pull-right"></textarea>
+Try it Yourself »
+</div>
+<br><br>
 {% load static %}
 <script src="{% static 'compiler/src-min/ace.js' %}" type="text/javascript" charset="utf-8"></script>
 
@@ -90,6 +95,7 @@
     $("#btn").on("click", function () {
         $(this).html("Submiting..... ");
         var source = editor.getValue();
+        alert(JSON.stringify($("#testcases").val().split("\n")));
         $.ajax(
             {
                 type: "POST",
@@ -98,19 +104,18 @@
 
                     source: source,
                     lang: lang,
-                    testcases: "['']",
-
+                    testcases:JSON.stringify($("#testcases").val().split("\n")),
+//
                     api_key: "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e",
                     wait: true,
-                    callbackUrl: 'http://localhost:8000/',
+//                    callbackUrl: 'http://localhost:8000/',
                     format: 'json'
                 },
 
 
                 success: function (request) {
                     if(request.result.message == "Success"){
-                        alert(request.result.stdout);
-                        $("#output").html(request.result.stdout);
+                        $("#output").html(String(request.result.stdout).replace("\n","<br>"));
                     }else{
                         alert(request.result.c);
                         var str = (request.result.compilemessage).toString();
@@ -124,9 +129,10 @@
 
                 },
 
-                failure:function () {
+                error:function (err) {
                     alert("Something went wrong please try again");
                     $("#btn").html("Submit");
+                    $("#output").html(err)
                 },
             })
 
