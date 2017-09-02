@@ -98,7 +98,7 @@ proc ::tk::dialog::error::ReturnInDetails w {
 #	err - The error message.
 #
 proc ::tk::dialog::error::bgerror err {
-    global errorInfo
+    global errorInfo tcl_platform
     variable button
 
     set info $errorInfo

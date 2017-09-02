@@ -8,7 +8,7 @@ extern "C" {
 /* Interface to random parts in ceval.c */
 
 PyAPI_FUNC(PyObject *) PyEval_CallObjectWithKeywords(
-    PyObject *func, PyObject *args, PyObject *kwargs);
+    PyObject *, PyObject *, PyObject *);
 
 /* Inline this */
 #define PyEval_CallObject(func,arg) \
@@ -25,10 +25,6 @@ PyAPI_FUNC(void) PyEval_SetProfile(Py_tracefunc, PyObject *);
 PyAPI_FUNC(void) PyEval_SetTrace(Py_tracefunc, PyObject *);
 PyAPI_FUNC(void) _PyEval_SetCoroutineWrapper(PyObject *);
 PyAPI_FUNC(PyObject *) _PyEval_GetCoroutineWrapper(void);
-PyAPI_FUNC(void) _PyEval_SetAsyncGenFirstiter(PyObject *);
-PyAPI_FUNC(PyObject *) _PyEval_GetAsyncGenFirstiter(void);
-PyAPI_FUNC(void) _PyEval_SetAsyncGenFinalizer(PyObject *);
-PyAPI_FUNC(PyObject *) _PyEval_GetAsyncGenFinalizer(void);
 #endif
 
 struct _frame; /* Avoid including frameobject.h */
@@ -123,9 +119,6 @@ PyAPI_FUNC(const char *) PyEval_GetFuncDesc(PyObject *);
 PyAPI_FUNC(PyObject *) PyEval_GetCallStats(PyObject *);
 PyAPI_FUNC(PyObject *) PyEval_EvalFrame(struct _frame *);
 PyAPI_FUNC(PyObject *) PyEval_EvalFrameEx(struct _frame *f, int exc);
-#ifndef Py_LIMITED_API
-PyAPI_FUNC(PyObject *) _PyEval_EvalFrameDefault(struct _frame *f, int exc);
-#endif
 
 /* Interface for threads.
 
@@ -179,9 +172,7 @@ PyAPI_FUNC(void) PyEval_RestoreThread(PyThreadState *);
 
 PyAPI_FUNC(int)  PyEval_ThreadsInitialized(void);
 PyAPI_FUNC(void) PyEval_InitThreads(void);
-#ifndef Py_LIMITED_API
 PyAPI_FUNC(void) _PyEval_FiniThreads(void);
-#endif /* !Py_LIMITED_API */
 PyAPI_FUNC(void) PyEval_AcquireLock(void);
 PyAPI_FUNC(void) PyEval_ReleaseLock(void);
 PyAPI_FUNC(void) PyEval_AcquireThread(PyThreadState *tstate);
@@ -191,10 +182,6 @@ PyAPI_FUNC(void) PyEval_ReInitThreads(void);
 #ifndef Py_LIMITED_API
 PyAPI_FUNC(void) _PyEval_SetSwitchInterval(unsigned long microseconds);
 PyAPI_FUNC(unsigned long) _PyEval_GetSwitchInterval(void);
-#endif
-
-#ifndef Py_LIMITED_API
-PyAPI_FUNC(Py_ssize_t) _PyEval_RequestCodeExtraIndex(freefunc);
 #endif
 
 #define Py_BEGIN_ALLOW_THREADS { \
@@ -219,14 +206,6 @@ PyAPI_FUNC(int) _PyEval_SliceIndex(PyObject *, Py_ssize_t *);
 PyAPI_FUNC(void) _PyEval_SignalAsyncExc(void);
 #endif
 
-/* Masks and values used by FORMAT_VALUE opcode. */
-#define FVC_MASK      0x3
-#define FVC_NONE      0x0
-#define FVC_STR       0x1
-#define FVC_REPR      0x2
-#define FVC_ASCII     0x3
-#define FVS_MASK      0x4
-#define FVS_HAVE_SPEC 0x4
 
 #ifdef __cplusplus
 }

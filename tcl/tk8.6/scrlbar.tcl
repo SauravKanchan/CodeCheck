@@ -152,12 +152,6 @@ switch [tk windowingsystem] {
 	}
     }
     "x11" {
-	bind Scrollbar <MouseWheel> {
-	    tk::ScrollByUnits %W v [expr {- (%D /120 ) * 4}]
-	}
-	bind Scrollbar <Shift-MouseWheel> {
-	    tk::ScrollByUnits %W h [expr {- (%D /120 ) * 4}]
-	}
 	bind Scrollbar <4> {tk::ScrollByUnits %W v -5}
 	bind Scrollbar <5> {tk::ScrollByUnits %W v 5}
 	bind Scrollbar <Shift-4> {tk::ScrollByUnits %W h -5}
@@ -430,9 +424,6 @@ proc ::tk::ScrollTopBottom {w x y} {
 
 proc ::tk::ScrollButton2Down {w x y} {
     variable ::tk::Priv
-    if {![winfo exists $w]} {
-        return
-    }
     set element [$w identify $x $y]
     if {[string match {arrow[12]} $element]} {
 	ScrollButtonDown $w $x $y
@@ -446,9 +437,7 @@ proc ::tk::ScrollButton2Down {w x y} {
     # slider drag.
 
     update idletasks
-    if {[winfo exists $w]} {
-        $w configure -activerelief sunken
-        $w activate slider
-        ScrollStartDrag $w $x $y
-    }
+    $w configure -activerelief sunken
+    $w activate slider
+    ScrollStartDrag $w $x $y
 }

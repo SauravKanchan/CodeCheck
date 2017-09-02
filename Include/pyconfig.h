@@ -14,6 +14,7 @@ the following #defines
 MS_WIN64 - Code specific to the MS Win64 API
 MS_WIN32 - Code specific to the MS Win32 (and Win64) API (obsolete, this covers all supported APIs)
 MS_WINDOWS - Code specific to Windows, but all versions.
+MS_WINCE - Code specific to Windows CE
 Py_ENABLE_SHARED - Code if the Python core is built as a DLL.
 
 Also note that neither "_M_IX86" or "_MSC_VER" should be used for
@@ -28,6 +29,10 @@ MS_CORE_DLL.
 WIN32 is still required for the locale module.
 
 */
+
+#ifdef _WIN32_WCE
+#define MS_WINCE
+#endif
 
 /* Deprecated USE_DL_EXPORT macro - please use Py_BUILD_CORE */
 #ifdef USE_DL_EXPORT
@@ -48,6 +53,8 @@ WIN32 is still required for the locale module.
 #define _CRT_NONSTDC_NO_DEPRECATE 1
 #endif
 
+/* Windows CE does not have these */
+#ifndef MS_WINCE
 #define HAVE_IO_H
 #define HAVE_SYS_UTIME_H
 #define HAVE_TEMPNAM
@@ -55,8 +62,11 @@ WIN32 is still required for the locale module.
 #define HAVE_TMPNAM
 #define HAVE_CLOCK
 #define HAVE_STRERROR
+#endif
 
+#ifdef HAVE_IO_H
 #include <io.h>
+#endif
 
 #define HAVE_HYPOT
 #define HAVE_STRFTIME
@@ -76,6 +86,17 @@ WIN32 is still required for the locale module.
 #define USE_SOCKET
 #endif
 
+/* CE6 doesn't have strdup() but _strdup(). Assume the same for earlier versions. */
+#if defined(MS_WINCE)
+#  include <stdlib.h>
+#  define strdup _strdup
+#endif
+
+#ifdef MS_WINCE
+/* Windows CE does not support environment variables */
+#define getenv(v) (NULL)
+#define environ (NULL)
+#endif
 
 /* Compiler specific defines */
 
@@ -265,6 +286,7 @@ typedef int pid_t;
 #endif
 
 /* 64 bit ints are usually spelt __int64 unless compiler has overridden */
+#define HAVE_LONG_LONG 1
 #ifndef PY_LONG_LONG
 #	define PY_LONG_LONG __int64
 #	define PY_LLONG_MAX _I64_MAX
@@ -290,11 +312,11 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 			their Makefile (other compilers are generally
 			taken care of by distutils.) */
 #			if defined(_DEBUG)
-#				pragma comment(lib,"python36_d.lib")
+#				pragma comment(lib,"python35_d.lib")
 #			elif defined(Py_LIMITED_API)
 #				pragma comment(lib,"python3.lib")
 #			else
-#				pragma comment(lib,"python36.lib")
+#				pragma comment(lib,"python35.lib")
 #			endif /* _DEBUG */
 #		endif /* _MSC_VER */
 #	endif /* Py_BUILD_CORE */
@@ -365,10 +387,39 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 
 /* define signed and unsigned exact-width 32-bit and 64-bit types, used in the
    implementation of Python integers. */
-#define PY_UINT32_T uint32_t
-#define PY_UINT64_T uint64_t
-#define PY_INT32_T int32_t
-#define PY_INT64_T int64_t
+#ifndef PY_UINT32_T
+#if SIZEOF_INT == 4
+#define HAVE_UINT32_T 1
+#define PY_UINT32_T unsigned int
+#elif SIZEOF_LONG == 4
+#define HAVE_UINT32_T 1
+#define PY_UINT32_T unsigned long
+#endif
+#endif
+
+#ifndef PY_UINT64_T
+#if SIZEOF_LONG_LONG == 8
+#define HAVE_UINT64_T 1
+#define PY_UINT64_T unsigned PY_LONG_LONG
+#endif
+#endif
+
+#ifndef PY_INT32_T
+#if SIZEOF_INT == 4
+#define HAVE_INT32_T 1
+#define PY_INT32_T int
+#elif SIZEOF_LONG == 4
+#define HAVE_INT32_T 1
+#define PY_INT32_T long
+#endif
+#endif
+
+#ifndef PY_INT64_T
+#if SIZEOF_LONG_LONG == 8
+#define HAVE_INT64_T 1
+#define PY_INT64_T PY_LONG_LONG
+#endif
+#endif
 
 /* Fairly standard from here! */
 
@@ -397,10 +448,14 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 /* #define const  */
 
 /* Define to 1 if you have the <conio.h> header file. */
+#ifndef MS_WINCE
 #define HAVE_CONIO_H 1
+#endif
 
 /* Define to 1 if you have the <direct.h> header file. */
+#ifndef MS_WINCE
 #define HAVE_DIRECT_H 1
+#endif
 
 /* Define if you have dirent.h.  */
 /* #define DIRENT 1 */
@@ -473,7 +528,9 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 /* #define HAVE_ALTZONE */
 
 /* Define if you have the putenv function.  */
+#ifndef MS_WINCE
 #define HAVE_PUTENV
+#endif
 
 /* Define if your compiler supports function prototypes */
 #define HAVE_PROTOTYPES
@@ -501,7 +558,9 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 #define HAVE_DYNAMIC_LOADING
 
 /* Define if you have ftime.  */
+#ifndef MS_WINCE
 #define HAVE_FTIME
+#endif
 
 /* Define if you have getpeername.  */
 #define HAVE_GETPEERNAME
@@ -510,7 +569,9 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 /* #undef HAVE_GETPGRP */
 
 /* Define if you have getpid.  */
+#ifndef MS_WINCE
 #define HAVE_GETPID
+#endif
 
 /* Define if you have gettimeofday.  */
 /* #undef HAVE_GETTIMEOFDAY */
@@ -572,10 +633,14 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 #endif
 
 /* Define to 1 if you have the `wcscoll' function. */
+#ifndef MS_WINCE
 #define HAVE_WCSCOLL 1
+#endif
 
 /* Define to 1 if you have the `wcsxfrm' function. */
+#ifndef MS_WINCE
 #define HAVE_WCSXFRM 1
+#endif
 
 /* Define if the zlib library has inflateCopy */
 #define HAVE_ZLIB_COPY 1
@@ -584,16 +649,24 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 /* #undef HAVE_DLFCN_H */
 
 /* Define to 1 if you have the <errno.h> header file. */
+#ifndef MS_WINCE
 #define HAVE_ERRNO_H 1
+#endif
 
 /* Define if you have the <fcntl.h> header file.  */
+#ifndef MS_WINCE
 #define HAVE_FCNTL_H 1
+#endif
 
 /* Define to 1 if you have the <process.h> header file. */
+#ifndef MS_WINCE
 #define HAVE_PROCESS_H 1
+#endif
 
 /* Define to 1 if you have the <signal.h> header file. */
+#ifndef MS_WINCE
 #define HAVE_SIGNAL_H 1
+#endif
 
 /* Define if you have the <stdarg.h> prototypes.  */
 #define HAVE_STDARG_PROTOTYPES
@@ -611,7 +684,9 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 /* #define HAVE_SYS_SELECT_H 1 */
 
 /* Define to 1 if you have the <sys/stat.h> header file.  */
+#ifndef MS_WINCE
 #define HAVE_SYS_STAT_H 1
+#endif
 
 /* Define if you have the <sys/time.h> header file.  */
 /* #define HAVE_SYS_TIME_H 1 */
@@ -620,7 +695,9 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 /* #define HAVE_SYS_TIMES_H 1 */
 
 /* Define to 1 if you have the <sys/types.h> header file.  */
+#ifndef MS_WINCE
 #define HAVE_SYS_TYPES_H 1
+#endif
 
 /* Define if you have the <sys/un.h> header file.  */
 /* #define HAVE_SYS_UN_H 1 */
@@ -642,9 +719,6 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 
 /* The size of `wchar_t', as computed by sizeof. */
 #define SIZEOF_WCHAR_T 2
-
-/* The size of `_Bool', as computed by sizeof. */
-#define SIZEOF__BOOL 1
 
 /* The size of `pid_t', as computed by sizeof. */
 #define SIZEOF_PID_T SIZEOF_INT

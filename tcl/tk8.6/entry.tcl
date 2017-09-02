@@ -46,6 +46,7 @@ bind Entry <<Copy>> {
     }
 }
 bind Entry <<Paste>> {
+    global tcl_platform
     catch {
 	if {[tk windowingsystem] ne "x11"} {
 	    catch {
@@ -357,18 +358,12 @@ proc ::tk::EntryMouseSelect {w x} {
 	    }
 	}
 	word {
-	    if {$cur < $anchor} {
+	    if {$cur < [$w index anchor]} {
 		set before [tcl_wordBreakBefore [$w get] $cur]
 		set after [tcl_wordBreakAfter [$w get] [expr {$anchor-1}]]
-	    } elseif {$cur > $anchor} {
+	    } else {
 		set before [tcl_wordBreakBefore [$w get] $anchor]
 		set after [tcl_wordBreakAfter [$w get] [expr {$cur - 1}]]
-	    } else {
-		if {[$w index @$Priv(pressX)] < $anchor} {
-		      incr anchor -1
-		}
-		set before [tcl_wordBreakBefore [$w get] $anchor]
-		set after [tcl_wordBreakAfter [$w get] $anchor]
 	    }
 	    if {$before < 0} {
 		set before 0

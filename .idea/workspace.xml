@@ -2,18 +2,264 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8693a97-f120-46c5-a2ee-4eefb5ce8cd3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compiler/templates/question_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compiler/templates/question_list.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codecheck/middleware/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codecheck/middleware/crossdomainxhr.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codecheck.iml" afterPath="$PROJECT_DIR$/.idea/codecheck.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compiler/static/compiler/js/jquery.cookie.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Include/osmodule.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Include/pydtrace.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Scripts/easy_install-3.6.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Scripts/pip3.6.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Scripts/python36.dll" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/compiler/static/compiler/js/jquery.ajax-cross-origin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Fort_Nelson" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Barnaul" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Tomsk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Astrakhan" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Kirov" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Ulyanovsk" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/chardetect.exe" afterPath="$PROJECT_DIR$/Scripts/chardetect.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/django-admin.exe" afterPath="$PROJECT_DIR$/Scripts/django-admin.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/easy_install.exe" afterPath="$PROJECT_DIR$/Scripts/easy_install.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/pip.exe" afterPath="$PROJECT_DIR$/Scripts/pip.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/pip3.exe" afterPath="$PROJECT_DIR$/Scripts/pip3.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/python.exe" afterPath="$PROJECT_DIR$/Scripts/python.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/pythonw.exe" afterPath="$PROJECT_DIR$/Scripts/pythonw.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/wheel.exe" afterPath="$PROJECT_DIR$/Scripts/wheel.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/Python-ast.h" afterPath="$PROJECT_DIR$/Include/Python-ast.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/Python.h" afterPath="$PROJECT_DIR$/Include/Python.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/abstract.h" afterPath="$PROJECT_DIR$/Include/abstract.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/accu.h" afterPath="$PROJECT_DIR$/Include/accu.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/asdl.h" afterPath="$PROJECT_DIR$/Include/asdl.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/ast.h" afterPath="$PROJECT_DIR$/Include/ast.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/bitset.h" afterPath="$PROJECT_DIR$/Include/bitset.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/bltinmodule.h" afterPath="$PROJECT_DIR$/Include/bltinmodule.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/boolobject.h" afterPath="$PROJECT_DIR$/Include/boolobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/bytearrayobject.h" afterPath="$PROJECT_DIR$/Include/bytearrayobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/bytes_methods.h" afterPath="$PROJECT_DIR$/Include/bytes_methods.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/bytesobject.h" afterPath="$PROJECT_DIR$/Include/bytesobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/cellobject.h" afterPath="$PROJECT_DIR$/Include/cellobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/ceval.h" afterPath="$PROJECT_DIR$/Include/ceval.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/classobject.h" afterPath="$PROJECT_DIR$/Include/classobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/code.h" afterPath="$PROJECT_DIR$/Include/code.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/codecs.h" afterPath="$PROJECT_DIR$/Include/codecs.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/compile.h" afterPath="$PROJECT_DIR$/Include/compile.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/complexobject.h" afterPath="$PROJECT_DIR$/Include/complexobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/datetime.h" afterPath="$PROJECT_DIR$/Include/datetime.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/descrobject.h" afterPath="$PROJECT_DIR$/Include/descrobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/dictobject.h" afterPath="$PROJECT_DIR$/Include/dictobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/dtoa.h" afterPath="$PROJECT_DIR$/Include/dtoa.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/dynamic_annotations.h" afterPath="$PROJECT_DIR$/Include/dynamic_annotations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/enumobject.h" afterPath="$PROJECT_DIR$/Include/enumobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/errcode.h" afterPath="$PROJECT_DIR$/Include/errcode.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/eval.h" afterPath="$PROJECT_DIR$/Include/eval.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/fileobject.h" afterPath="$PROJECT_DIR$/Include/fileobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/fileutils.h" afterPath="$PROJECT_DIR$/Include/fileutils.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/floatobject.h" afterPath="$PROJECT_DIR$/Include/floatobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/frameobject.h" afterPath="$PROJECT_DIR$/Include/frameobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/funcobject.h" afterPath="$PROJECT_DIR$/Include/funcobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/genobject.h" afterPath="$PROJECT_DIR$/Include/genobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/graminit.h" afterPath="$PROJECT_DIR$/Include/graminit.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/grammar.h" afterPath="$PROJECT_DIR$/Include/grammar.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/import.h" afterPath="$PROJECT_DIR$/Include/import.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/intrcheck.h" afterPath="$PROJECT_DIR$/Include/intrcheck.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/iterobject.h" afterPath="$PROJECT_DIR$/Include/iterobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/listobject.h" afterPath="$PROJECT_DIR$/Include/listobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/longintrepr.h" afterPath="$PROJECT_DIR$/Include/longintrepr.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/longobject.h" afterPath="$PROJECT_DIR$/Include/longobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/marshal.h" afterPath="$PROJECT_DIR$/Include/marshal.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/memoryobject.h" afterPath="$PROJECT_DIR$/Include/memoryobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/metagrammar.h" afterPath="$PROJECT_DIR$/Include/metagrammar.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/methodobject.h" afterPath="$PROJECT_DIR$/Include/methodobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/modsupport.h" afterPath="$PROJECT_DIR$/Include/modsupport.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/moduleobject.h" afterPath="$PROJECT_DIR$/Include/moduleobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/namespaceobject.h" afterPath="$PROJECT_DIR$/Include/namespaceobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/node.h" afterPath="$PROJECT_DIR$/Include/node.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/object.h" afterPath="$PROJECT_DIR$/Include/object.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/objimpl.h" afterPath="$PROJECT_DIR$/Include/objimpl.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/odictobject.h" afterPath="$PROJECT_DIR$/Include/odictobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/opcode.h" afterPath="$PROJECT_DIR$/Include/opcode.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/osdefs.h" afterPath="$PROJECT_DIR$/Include/osdefs.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/parsetok.h" afterPath="$PROJECT_DIR$/Include/parsetok.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/patchlevel.h" afterPath="$PROJECT_DIR$/Include/patchlevel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pgen.h" afterPath="$PROJECT_DIR$/Include/pgen.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pgenheaders.h" afterPath="$PROJECT_DIR$/Include/pgenheaders.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/py_curses.h" afterPath="$PROJECT_DIR$/Include/py_curses.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyarena.h" afterPath="$PROJECT_DIR$/Include/pyarena.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyatomic.h" afterPath="$PROJECT_DIR$/Include/pyatomic.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pycapsule.h" afterPath="$PROJECT_DIR$/Include/pycapsule.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyconfig.h" afterPath="$PROJECT_DIR$/Include/pyconfig.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyctype.h" afterPath="$PROJECT_DIR$/Include/pyctype.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pydebug.h" afterPath="$PROJECT_DIR$/Include/pydebug.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyerrors.h" afterPath="$PROJECT_DIR$/Include/pyerrors.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyexpat.h" afterPath="$PROJECT_DIR$/Include/pyexpat.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyfpe.h" afterPath="$PROJECT_DIR$/Include/pyfpe.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pygetopt.h" afterPath="$PROJECT_DIR$/Include/pygetopt.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyhash.h" afterPath="$PROJECT_DIR$/Include/pyhash.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pylifecycle.h" afterPath="$PROJECT_DIR$/Include/pylifecycle.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pymacconfig.h" afterPath="$PROJECT_DIR$/Include/pymacconfig.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pymacro.h" afterPath="$PROJECT_DIR$/Include/pymacro.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pymath.h" afterPath="$PROJECT_DIR$/Include/pymath.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pymem.h" afterPath="$PROJECT_DIR$/Include/pymem.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pyport.h" afterPath="$PROJECT_DIR$/Include/pyport.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pystate.h" afterPath="$PROJECT_DIR$/Include/pystate.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pystrcmp.h" afterPath="$PROJECT_DIR$/Include/pystrcmp.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pystrhex.h" afterPath="$PROJECT_DIR$/Include/pystrhex.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pystrtod.h" afterPath="$PROJECT_DIR$/Include/pystrtod.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pythonrun.h" afterPath="$PROJECT_DIR$/Include/pythonrun.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pythread.h" afterPath="$PROJECT_DIR$/Include/pythread.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/pytime.h" afterPath="$PROJECT_DIR$/Include/pytime.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/rangeobject.h" afterPath="$PROJECT_DIR$/Include/rangeobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/setobject.h" afterPath="$PROJECT_DIR$/Include/setobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/sliceobject.h" afterPath="$PROJECT_DIR$/Include/sliceobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/structmember.h" afterPath="$PROJECT_DIR$/Include/structmember.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/structseq.h" afterPath="$PROJECT_DIR$/Include/structseq.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/symtable.h" afterPath="$PROJECT_DIR$/Include/symtable.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/sysmodule.h" afterPath="$PROJECT_DIR$/Include/sysmodule.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/token.h" afterPath="$PROJECT_DIR$/Include/token.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/traceback.h" afterPath="$PROJECT_DIR$/Include/traceback.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/tupleobject.h" afterPath="$PROJECT_DIR$/Include/tupleobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/typeslots.h" afterPath="$PROJECT_DIR$/Include/typeslots.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/ucnhash.h" afterPath="$PROJECT_DIR$/Include/ucnhash.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/unicodeobject.h" afterPath="$PROJECT_DIR$/Include/unicodeobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/warnings.h" afterPath="$PROJECT_DIR$/Include/warnings.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Include/weakrefobject.h" afterPath="$PROJECT_DIR$/Include/weakrefobject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/activate" afterPath="$PROJECT_DIR$/Scripts/activate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/activate.bat" afterPath="$PROJECT_DIR$/Scripts/activate.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/django-admin.py" afterPath="$PROJECT_DIR$/Scripts/django-admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codecheck/settings.py" afterPath="$PROJECT_DIR$/codecheck/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiler/static/compiler/css/theme.css" afterPath="$PROJECT_DIR$/compiler/static/compiler/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiler/urls.py" afterPath="$PROJECT_DIR$/compiler/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codecheck/staticfiles/compiler/css/theme.css" afterPath="$PROJECT_DIR$/codecheck/staticfiles/compiler/css/theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiler/templates/code_editor.html" afterPath="$PROJECT_DIR$/compiler/templates/code_editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiler/views.py" afterPath="$PROJECT_DIR$/compiler/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pip-selfcheck.json" afterPath="$PROJECT_DIR$/pip-selfcheck.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/clock.tcl" afterPath="$PROJECT_DIR$/tcl/tcl8.6/clock.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/encoding/jis0208.enc" afterPath="$PROJECT_DIR$/tcl/tcl8.6/encoding/jis0208.enc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/init.tcl" afterPath="$PROJECT_DIR$/tcl/tcl8.6/init.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/opt0.4/optparse.tcl" afterPath="$PROJECT_DIR$/tcl/tcl8.6/opt0.4/optparse.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/package.tcl" afterPath="$PROJECT_DIR$/tcl/tcl8.6/package.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/safe.tcl" afterPath="$PROJECT_DIR$/tcl/tcl8.6/safe.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tm.tcl" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tm.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Africa/Cairo" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Africa/Cairo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Africa/Casablanca" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Africa/Casablanca" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Africa/El_Aaiun" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Africa/El_Aaiun" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Adak" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Adak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Antigua" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Antigua" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Cambridge_Bay" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Cambridge_Bay" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Caracas" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Caracas" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Cayman" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Cayman" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Inuvik" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Inuvik" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Iqaluit" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Iqaluit" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Metlakatla" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Metlakatla" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Montevideo" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Montevideo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Montreal" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Montreal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Pangnirtung" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Pangnirtung" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Port-au-Prince" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Port-au-Prince" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Rankin_Inlet" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Rankin_Inlet" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Resolute" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Resolute" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Santa_Isabel" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Santa_Isabel" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Santiago" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Santiago" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Yellowknife" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/America/Yellowknife" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Casey" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Casey" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Davis" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Davis" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/DumontDUrville" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/DumontDUrville" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Macquarie" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Macquarie" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Mawson" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Mawson" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Palmer" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Palmer" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Rothera" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Rothera" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Syowa" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Syowa" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Troll" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Troll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Vostok" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Antarctica/Vostok" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Almaty" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Almaty" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Anadyr" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Anadyr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Aqtau" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Aqtau" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Aqtobe" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Aqtobe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Baku" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Baku" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Chita" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Chita" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Choibalsan" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Choibalsan" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Gaza" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Gaza" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Hebron" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Hebron" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Hovd" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Hovd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Irkutsk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Irkutsk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Kamchatka" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Kamchatka" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Karachi" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Karachi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Khandyga" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Khandyga" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Krasnoyarsk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Krasnoyarsk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Magadan" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Magadan" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Novokuznetsk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Novokuznetsk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Novosibirsk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Novosibirsk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Omsk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Omsk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Oral" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Oral" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Pyongyang" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Pyongyang" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Qyzylorda" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Qyzylorda" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Sakhalin" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Sakhalin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Srednekolymsk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Srednekolymsk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Tehran" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Tehran" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Ulaanbaatar" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Ulaanbaatar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Ust-Nera" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Ust-Nera" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Vladivostok" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Vladivostok" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Yakutsk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Yakutsk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Yekaterinburg" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Yekaterinburg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Yerevan" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Asia/Yerevan" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Atlantic/Canary" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Atlantic/Canary" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Chisinau" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Chisinau" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Istanbul" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Istanbul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Kaliningrad" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Kaliningrad" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Minsk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Minsk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Moscow" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Moscow" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Samara" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Samara" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Simferopol" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Simferopol" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Sofia" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Sofia" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Tallinn" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Tallinn" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Vilnius" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Vilnius" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Volgograd" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Europe/Volgograd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Indian/Kerguelen" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Indian/Kerguelen" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Easter" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Easter" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Fiji" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Fiji" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Midway" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Midway" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Norfolk" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Norfolk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Saipan" afterPath="$PROJECT_DIR$/tcl/tcl8.6/tzdata/Pacific/Saipan" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tcl8.6/word.tcl" afterPath="$PROJECT_DIR$/tcl/tcl8.6/word.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/bgerror.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/bgerror.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/button.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/button.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/console.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/console.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/aniwave.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/aniwave.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/bind.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/bind.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/entry2.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/entry2.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/floor.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/floor.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/fontchoose.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/fontchoose.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/image2.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/image2.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/items.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/items.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/ixset" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/ixset" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/knightstour.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/knightstour.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/menu.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/menu.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/menubu.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/menubu.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/msgbox.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/msgbox.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/paned2.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/paned2.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/puzzle.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/puzzle.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/rmt" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/rmt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/sayings.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/sayings.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/search.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/search.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/square" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/square" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/states.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/states.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/style.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/style.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/text.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/text.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/textpeer.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/textpeer.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/timer" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/timer" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/twind.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/twind.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/demos/widget" afterPath="$PROJECT_DIR$/tcl/tk8.6/demos/widget" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/dialog.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/dialog.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/entry.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/entry.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/listbox.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/listbox.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/megawidget.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/megawidget.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/menu.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/menu.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/msgbox.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/msgbox.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/msgs/es.msg" afterPath="$PROJECT_DIR$/tcl/tk8.6/msgs/es.msg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/msgs/ru.msg" afterPath="$PROJECT_DIR$/tcl/tk8.6/msgs/ru.msg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/pkgIndex.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/pkgIndex.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/scrlbar.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/scrlbar.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/spinbox.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/spinbox.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/text.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/text.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/tk.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/tk.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/tkfbox.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/tkfbox.tcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tcl/tk8.6/ttk/menubutton.tcl" afterPath="$PROJECT_DIR$/tcl/tk8.6/ttk/menubutton.tcl" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +271,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HackerRankAPI.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiler/static/compiler/css/theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HackerRankAPI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lib/site-packages/hackerrank/HackerRankAPI.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -33,6 +289,90 @@
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiler/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codecheck/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="141" column="11" lean-forward="false" selection-start-line="141" selection-start-column="11" selection-end-line="141" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="code_editor.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/compiler/templates/code_editor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="118" column="40" lean-forward="true" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
+              <folding>
+                <element signature="e#308#2708#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiler/templates/result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiler/templates/question_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiler/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="71" lean-forward="false" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.cookie.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiler/static/compiler/js/jquery.cookie.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiler/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,6 +386,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Lib/site-packages/hackerrank/HackerRankAPI.py" />
+        <option value="$PROJECT_DIR$/compiler/urls.py" />
+        <option value="$PROJECT_DIR$/codecheck/settings.py" />
+        <option value="$PROJECT_DIR$/compiler/views.py" />
+        <option value="$PROJECT_DIR$/compiler/templates/code_editor.html" />
       </list>
     </option>
   </component>
@@ -90,6 +434,100 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codecheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -97,6 +535,11 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\NAVEENCHANDRA\Desktop\Saurav\codecheck\compiler\static\compiler\js" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -176,26 +619,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.602071" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,12 +653,96 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/compiler/templates/question_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/static/compiler/css/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lib/site-packages/hackerrank/HackerRankAPI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/static/compiler/js/jquery.cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="71" lean-forward="false" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/templates/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/templates/question_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecheck/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="141" column="11" lean-forward="false" selection-start-line="141" selection-start-column="11" selection-end-line="141" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/templates/code_editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="118" column="40" lean-forward="true" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
+          <folding>
+            <element signature="e#308#2708#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -7,16 +7,6 @@
 extern "C" {
 #endif
 
-typedef uint16_t _Py_CODEUNIT;
-
-#ifdef WORDS_BIGENDIAN
-#  define _Py_OPCODE(word) ((word) >> 8)
-#  define _Py_OPARG(word) ((word) & 255)
-#else
-#  define _Py_OPCODE(word) ((word) & 255)
-#  define _Py_OPARG(word) ((word) >> 8)
-#endif
-
 /* Bytecode object */
 typedef struct {
     PyObject_HEAD
@@ -25,29 +15,26 @@ typedef struct {
     int co_nlocals;		/* #local variables */
     int co_stacksize;		/* #entries needed for evaluation stack */
     int co_flags;		/* CO_..., see below */
-    int co_firstlineno;   /* first source line number */
     PyObject *co_code;		/* instruction opcodes */
     PyObject *co_consts;	/* list (constants used) */
     PyObject *co_names;		/* list of strings (names used) */
     PyObject *co_varnames;	/* tuple of strings (local variable names) */
     PyObject *co_freevars;	/* tuple of strings (free variable names) */
     PyObject *co_cellvars;      /* tuple of strings (cell variable names) */
-    /* The rest aren't used in either hash or comparisons, except for co_name,
-       used in both. This is done to preserve the name and line number
+    /* The rest aren't used in either hash or comparisons, except for
+       co_name (used in both) and co_firstlineno (used only in
+       comparisons).  This is done to preserve the name and line number
        for tracebacks and debuggers; otherwise, constant de-duplication
        would collapse identical functions/lambdas defined on different lines.
     */
     unsigned char *co_cell2arg; /* Maps cell vars which are arguments. */
     PyObject *co_filename;	/* unicode (where it was loaded from) */
     PyObject *co_name;		/* unicode (name, for reference) */
+    int co_firstlineno;		/* first source line number */
     PyObject *co_lnotab;	/* string (encoding addr<->lineno mapping) See
 				   Objects/lnotab_notes.txt for details. */
     void *co_zombieframe;     /* for optimization only (see frameobject.c) */
     PyObject *co_weakreflist;   /* to support weakrefs to code objects */
-    /* Scratch space for extra data relating to the code object.
-       Type is a void* to keep the format private in codeobject.c to force
-       people to go through the proper APIs. */
-    void *co_extra;
 } PyCodeObject;
 
 /* Masks for co_flags above */
@@ -68,7 +55,6 @@ typedef struct {
    ``async def`` keywords) */
 #define CO_COROUTINE            0x0080
 #define CO_ITERABLE_COROUTINE   0x0100
-#define CO_ASYNC_GENERATOR      0x0200
 
 /* These are no longer used. */
 #if 0
@@ -140,15 +126,7 @@ PyAPI_FUNC(PyObject*) _PyCode_ConstantKey(PyObject *obj);
 #endif
 
 PyAPI_FUNC(PyObject*) PyCode_Optimize(PyObject *code, PyObject* consts,
-                                      PyObject *names, PyObject *lnotab);
-
-
-#ifndef Py_LIMITED_API
-PyAPI_FUNC(int) _PyCode_GetExtra(PyObject *code, Py_ssize_t index,
-                                 void **extra);
-PyAPI_FUNC(int) _PyCode_SetExtra(PyObject *code, Py_ssize_t index,
-                                 void *extra);
-#endif
+                                      PyObject *names, PyObject *lineno_obj);
 
 #ifdef __cplusplus
 }

@@ -46,16 +46,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
 
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.BrokenLinkEmailsMiddleware',
-    'django.middleware.common.CommonMiddleware',
-
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'codecheck.urls'
@@ -141,3 +139,4 @@ STATICFILES_DIRS = [
 
 
 DEFAULT_POINTS = 100
+API_KEY = "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e"  #your API-KEY here

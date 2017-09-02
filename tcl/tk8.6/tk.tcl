@@ -10,8 +10,10 @@
 # See the file "license.terms" for information on usage and redistribution of
 # this file, and for a DISCLAIMER OF ALL WARRANTIES.
 
+# Insist on running with compatible version of Tcl
+package require Tcl 8.6
 # Verify that we have Tk binary and script components from the same release
-package require -exact Tk  8.6.6
+package require -exact Tk  8.6.4
 
 # Create a ::tk namespace
 namespace eval ::tk {
@@ -251,6 +253,7 @@ proc ::tk::ScreenChanged screen {
 
     uplevel #0 [list upvar #0 ::tk::Priv.$disp ::tk::Priv]
     variable ::tk::Priv
+    global tcl_platform
 
     if {[info exists Priv]} {
 	set Priv(screen) $screen
@@ -309,6 +312,7 @@ proc ::tk::EventMotifBindings {n1 dummy dummy} {
     event $op <<Cut>> <Control-Key-w> <Control-Lock-Key-W> <Shift-Key-Delete>
     event $op <<Copy>> <Meta-Key-w> <Meta-Lock-Key-W> <Control-Key-Insert>
     event $op <<Paste>> <Control-Key-y> <Control-Lock-Key-Y> <Shift-Key-Insert>
+    event $op <<Undo>> <Control-underscore>
     event $op <<PrevChar>> <Control-Key-b> <Control-Lock-Key-B>
     event $op <<NextChar>> <Control-Key-f> <Control-Lock-Key-F>
     event $op <<PrevLine>> <Control-Key-p> <Control-Lock-Key-P>
