@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Questions</h2>
+    <ul>
+        {% for question in object_list %}
+            <li><a href="{% url 'question-detail' question.id %}">{{ question.title }}
+    </a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
