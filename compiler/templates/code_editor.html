@@ -90,6 +90,9 @@
     $("#btn").on("click", function () {
         $(this).html("Submiting..... ");
         var source = editor.getValue();
+        // seperate each test case by , and provide output in " "
+        var test = ["1 2","3 4"];
+        var myTest = JSON.stringify(test);
         $.ajax(
             {
                 type: "POST",
@@ -98,7 +101,7 @@
 
                     source: source,
                     lang: lang,
-                    testcases: "['']",
+                    testcases: myTest,
 
                     api_key: "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e",
                     wait: true,
