@@ -114,7 +114,8 @@
 
 
                 success: function (output) {
-                    var str = (output.output).toString();
+                $("#output").html()
+                    var str = (request.result.compilemessage).toString();
                      str=decodeURIComponent(escape(str));
                  $("#output").html(str);
                 },
