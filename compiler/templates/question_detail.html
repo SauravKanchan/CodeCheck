@@ -100,10 +100,10 @@
 		<!-- submit btn -->
 		<button id="btn" class="pull-right btn btn-success">Submit</button>
          
-		
+		<input type="checkbox" id="custom-input-checkbox"> Use custom input to test the code<br>
 		<div class="panel panel-default">
 			  <div class="panel-body">
-			  	<textarea id="testcases" placeholder="Enter your testcases here..." class="form-control" rows="5"></textarea>
+			  	<textarea id="custom-input" placeholder="Enter your testcases here..." class="form-control" rows="5"></textarea>
 			  </div>
 			</div>
 		
@@ -143,6 +143,9 @@
         var source = editor.getValue();
         var caseData = $("#data").data("case");
         var test = caseData.split("\n");
+        if( $("#custom-input-checkbox").prop('checked') == true ){
+			test = $("#custom-input").val().split("\n");
+			};
         var myTest = JSON.stringify(test);
         alert(myTest);
         $.ajax(
