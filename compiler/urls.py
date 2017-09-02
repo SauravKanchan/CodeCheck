@@ -12,6 +12,6 @@ urlpatterns = [
     url(r'^$',code_editor,name="compiler"),
     url(r'^result/', result, name="result"),
     url(r'^questions/$', QuestionList.as_view(template_name='question_list.html'),name='question-list'),
-    url(r'^(?P<pk>\d+)$',QuestionDetail.as_view(template_name='question_detail.html'),name="question-detail"),
+    url(r'^questions/(?P<pk>\d+)$',QuestionDetail.as_view(template_name='question_detail.html'),name="question-detail"),
 
 ]
