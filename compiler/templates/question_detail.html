@@ -34,6 +34,8 @@
 					{% endfor %}
 			  </div>
 		   </div>
+		   
+		   <meta id="data" data-case="{{question.testcases}}">
 
 		   <div class="panel panel-default">
 			  <div class="panel-body">Points: {{question.points}}</div>
@@ -139,7 +141,8 @@
     $("#btn").on("click", function () {
         $(this).html("Submiting..... ");
         var source = editor.getValue();
-        var test = $("#testcases").val().split("\n")
+        var caseData = $("#data").data("case");
+        var test = caseData.split("\n");
         var myTest = JSON.stringify(test);
         alert(myTest);
         $.ajax(
