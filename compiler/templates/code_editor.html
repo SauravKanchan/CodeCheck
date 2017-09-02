@@ -98,7 +98,7 @@ Try it Yourself »
 
         var test = $("#testcases").val().split("\n")
         var myTest = JSON.stringify(test);
-        alert(myTest);
+//        alert(myTest);
         $.ajax(
             {
                 type: "POST",
@@ -131,9 +131,9 @@ Try it Yourself »
                 },
 
                 error:function (err) {
-                    alert("Something went wrong please try again");
+
                     $("#btn").html("Submit");
-                    $("#output").html(err)
+                    $("#output").html("Something went wrong please try again");
                 },
             })
 
