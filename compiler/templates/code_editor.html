@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
+
+
 <style type="text/css" media="screen">
     #editor {
         position: absolute;
-        top: 0;
-        right: 50%;
-        bottom: 0;
-        left: 0;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
     }
 </style>
 
-<div id="editor"></div>
-    <select id="language" data-placeholder="Choose a Language..." class="select pull-right" tabindex="1">
+<div class="container">
+    <div class="col-sm-12" id="header">
+        <div class="col-sm-2">
+            <h4 class="language-text">Select your language:</h4>
+        </div>
+        <div id="outer" class="col-sm-2">
+            <select id="language" data-placeholder="Choose a Language..." class="" tabindex="1">
         <option value="1">c</option>
         <option value="54">fortran</option>
         <option value="39">smalltalk</option>
@@ -54,20 +61,44 @@
         <option value="5">python</option>
         <option value="30">python3</option>
         <option value="16">erlang</option>
-    </select><br><br>
-<button id="btn" class="pull-right btn btn-success">Submit</button>
-<br><br>
-<div id="output" class="well  pull-right">
-    Your output:-
+    </select>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-6 pull-right" >
+            <div class="col-sm-3 col-sm-offset-8">
+            <h4 class="language-text">Custom Input: </h4>
+            </div>
+            <div class="col-sm-1 pull-right">
+                <input id="custom-check" type="checkbox">    
+            </div>
+        </div>
+    </div>
+    <div id="spacing" class="col-sm-12">
+        <div id="editor"></div>
+    </div>
+    <div class="col-sm-12" id="footer-compiler">
+        <button id="btn" class="button-style">Submit your code</button>
+    </div>
+</div>
 
+<div class="container" id="outermost">
+    <div class="container" id="middle">
+        <div class="container innermost">
+            <h4>Testcases:</h4>
+            <textarea id="testcases" placeholder="Enter your testcases here..." ></textarea>
+        </div>
+        <div class="container innermost">
+            <div id="output">
+                <h4>Output:</h4>
+            </div>
+        </div>
+    </div>
+    
 </div>
-<br><br>
-<div>
-    <br><br><br>
-<textarea id="testcases" placeholder="Enter your testcases here..." class="pull-right"></textarea>
-Try it Yourself »
-</div>
-<br><br>
+
+
+
+
 {% load static %}
 <script src="{% static 'compiler/src-min/ace.js' %}" type="text/javascript" charset="utf-8"></script>
 
