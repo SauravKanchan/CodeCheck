@@ -13,13 +13,16 @@ class Question(models.Model):
     track = models.ForeignKey(Track,on_delete=models.CASCADE)
     title = models.CharField(max_length=400)
     description = models.CharField(max_length=1000,default="")
-    testcases = models.TextField(max_length=10000)
-    testcases_output = models.TextField(max_length=10000,default="")
+    testcases = models.TextField(max_length=100)
+    testcases_output = models.TextField(max_length=100,default="")
     inputs = models.TextField(max_length=50000)
+    output = models.TextField(max_length=10000)
     points = models.PositiveIntegerField(default=settings.DEFAULT_POINTS)
     right_count = models.PositiveIntegerField(default=0)
     wrong_count = models.PositiveIntegerField(default=0)
-    output = models.TextField(max_length=10000)
+
+    def total_submission(self):
+        return self.wrong_count+self.right_count
 
     def get_percentage_correct(self):
         return (self.right_count*100)/(self.wrong_count+self.right_count)
@@ -42,7 +45,6 @@ class Question(models.Model):
             self.wrong_count+=1
             self.save()
             return False
-
 
     def __str__(self):
         return self.title

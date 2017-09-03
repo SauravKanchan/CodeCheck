@@ -16,28 +16,15 @@
                 </div>
             </div>
 
-            <div class="panel panel-default">
-                <div class="panel-heading">Inputs</div>
-                <div class="panel-body">
-                    {% for i in question.inputs %}
-                        {{ i|linebreaksbr }}
-                    {% endfor %}
-                </div>
-            </div>
 
             <meta id="data" data-case="{{ question.testcases }}">
 
             <div class="panel panel-default">
                 <div class="panel-body">Points: {{ question.points }}</div>
+
+                <div class="panel-body">Correct submission {{ question.get_percentage_correct }}%</div>
             </div>
 
-            <div class="panel panel-default">
-                <div class="panel-body">Right Count: {{ question.right_count }}</div>
-            </div>
-
-            <div class="panel panel-default">
-                <div class="panel-body">Wrong Count: {{ question.wrong_count }}</div>
-            </div>
 
             <div id="result">
                 <div>
@@ -45,7 +32,7 @@
 
                     <!-- end of row -->
                     <div>
-                        <button id="question-submit">Sumbmit question</button>
+                        <button class="btn btn-success col-sm-offset-5" id="question-submit">Sumbmit question</button>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% block cdn %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+{% endblock %}
+
 
 {% block content %}
 <form id = "data">
@@ -19,12 +24,15 @@
         <div class="col-sm-2">
             <h4 class="language-text">Select your language:</h4>
         </div>
-        <div id="outer" class="col-sm-2">
+        <div id="outer" class="col-sm-5" style="padding-top: 5px;">
             <select id="language" data-placeholder="Choose a Language..." class="" tabindex="1">
         <option value="1">c</option>
+        <option value="5">python</option>
+        <option value="30">python3</option>
+        <option value="3">java</option>
+        <option value="2">cpp</option>
         <option value="54">fortran</option>
         <option value="39">smalltalk</option>
-        <option value="3">java</option>
         <option value="14">bash</option>
         <option value="15">scala</option>
         <option value="43">java8</option>
@@ -43,7 +51,6 @@
         <option value="50">rust</option>
         <option value="25">pascal</option>
         <option value="37">visualbasic</option>
-        <option value="2">cpp</option>
         <option value="46">octave</option>
         <option value="42">tsql</option>
         <option value="41">whitespace</option>
@@ -60,8 +67,6 @@
         <option value="49">racket</option>
         <option value="40">tcl</option>
         <option value="24">r</option>
-        <option value="5">python</option>
-        <option value="30">python3</option>
         <option value="16">erlang</option>
     </select>
         </div>
@@ -113,7 +118,7 @@
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/c_cpp");
     editor.setShowPrintMargin(false);
-
+    $('select').select2();
 
     $("#language").change(function () {
         var l =($("select option:selected").text());
