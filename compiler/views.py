@@ -1,7 +1,7 @@
 from django.shortcuts import render,render_to_response,HttpResponse
 from .models import Question
 from django.views.generic import ListView,DetailView
-from hackerrank.HackerRankAPI import HackerRankAPI
+from .compiler import HackerRankAPI
 from django.conf import settings
 import json
 
