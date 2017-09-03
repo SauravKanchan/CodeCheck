@@ -2,47 +2,90 @@
 {% block content %}
     <div class="container">
         <div class="row">
-           <div class="panel panel-default">
-			  <div class="panel-heading">Question</div>
-			  <div class="panel-body">{{question.title}}</div>
-		   </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Question</div>
+                <div class="panel-body">{{ question.title }}</div>
+            </div>
 
-		   <div class="panel panel-default">
-			  <div class="panel-heading">Test Cases</div>
-			  <div class="panel-body">
-				  	{% for i in question.testcases %}
-						{{ i|linebreaksbr }}
-					{% endfor %}
-			  </div>
-		   </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Test Cases</div>
+                <div class="panel-body">
+                    {% for i in question.testcases %}
+                        {{ i|linebreaksbr }}
+                    {% endfor %}
+                </div>
+            </div>
 
-		   <div class="panel panel-default">
-			  <div class="panel-heading">Inputs</div>
-			  <div class="panel-body">
-				  	{% for i in question.inputs %}
-						{{ i|linebreaksbr }}
-					{% endfor %}
-			  </div>
-		   </div>
-		   
-		   <meta id="data" data-case="{{question.testcases}}">
+            <div class="panel panel-default">
+                <div class="panel-heading">Inputs</div>
+                <div class="panel-body">
+                    {% for i in question.inputs %}
+                        {{ i|linebreaksbr }}
+                    {% endfor %}
+                </div>
+            </div>
 
-		   <div class="panel panel-default">
-			  <div class="panel-body">Points: {{question.points}}</div>
-			</div>
+            <meta id="data" data-case="{{ question.testcases }}">
 
-			<div class="panel panel-default">
-			  <div class="panel-body">Right Count: {{question.right_count}}</div>
-			</div>
+            <div class="panel panel-default">
+                <div class="panel-body">Points: {{ question.points }}</div>
+            </div>
 
-			<div class="panel panel-default">
-			  <div class="panel-body">Wrong Count: {{question.wrong_count}}</div>
-			</div>
-          
-        {% include 'code_editor.html' %}
-        
-		<!-- end of row -->
-       </div>
-    </div>
+            <div class="panel panel-default">
+                <div class="panel-body">Right Count: {{ question.right_count }}</div>
+            </div>
 
+            <div class="panel panel-default">
+                <div class="panel-body">Wrong Count: {{ question.wrong_count }}</div>
+            </div>
+
+            <div id="result">
+                <div>
+                    {% include 'code_editor.html' %}
+
+                    <!-- end of row -->
+                    <div>
+                        <button id="question-submit">Sumbmit question</button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $("#question-submit").on("click", function () {
+                    $("#output").html("Submitting..");
+                    // disable submit btn
+                    $("#btn").prop('disabled', true);
+                    $.ajax(
+                        {
+                            type: "POST",
+                            url: "{% url 'test' %}",
+                            data: {
+
+                                source: editor.getValue(),
+                                lang: $("select option:selected").text(),
+                                id: {{ question.id }},
+                                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+
+                            },
+
+
+                            success: function (output) {
+                                // enables submit btn
+                                $("#btn").prop('disabled', false)
+                                var str = (output.output).toString();
+                                str = decodeURIComponent(escape(str));
+                                $("#output").html(str);
+                            },
+
+                            error: function (err) {
+                                // enables submit btn
+                                $("#btn").prop('disabled', false)
+                                $("#output").html("Something went wrong please try again");
+                            },
+                        })
+
+                })
+
+
+            </script>
 {% endblock content %}

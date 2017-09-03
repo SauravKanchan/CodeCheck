@@ -56,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+    'codecheck.middleware.AuthRequiredMiddleware.AuthRequiredMiddleware'
+
 ]
 
 ROOT_URLCONF = 'codecheck.urls'
@@ -132,6 +134,9 @@ STATICFILES_DIRS = [
 ]
 
 ERROR_MESSAGE = "Something went wrong please try again"
+CORECT_SUBMISSION_MESSAGE = "Correct"
+INCORECT_SUBMISSION_MESSAGE = "Wrong Answer"
+
 
 DEFAULT_POINTS = 100
 API_KEY = "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e"  #your API-KEY here

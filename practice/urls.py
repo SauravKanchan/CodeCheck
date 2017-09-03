@@ -11,5 +11,6 @@ urlpatterns = [
 
     url(r'^/$', QuestionList.as_view(template_name='question_list.html'), name='question-list'),
     url(r'^/(?P<pk>\d+)$', QuestionDetail.as_view(template_name='question_detail.html'), name="question-detail"),
+    url('^/test',test,name="test"),
 
 ]
