@@ -24,7 +24,7 @@ def result(request):
             if not output:
                 output = message.replace("\n","<br>")
         except:
-            output = "Something went wrong please try again"
+            output = settings.ERROR_MESSAGE
         return HttpResponse(json.dumps({'output': output}), content_type="application/json")
     else:
         return render_to_response('code_editor.html', locals())

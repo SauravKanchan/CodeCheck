@@ -136,7 +136,7 @@ STATICFILES_DIRS = [
 #     'api.hackerrank.com',
 # )
 #
-
+ERROR_MESSAGE = "Something went wrong please try again"
 
 DEFAULT_POINTS = 100
 API_KEY = "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e"  #your API-KEY here
