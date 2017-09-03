@@ -50,70 +50,8 @@
 			</div>
           
         
-        <div class="panel panel-default">
-        <select id="language" data-placeholder="Choose a Language..." class="select pull-right" tabindex="1">
-	        <option value="1">c</option>
-	        <option value="54">fortran</option>
-	        <option value="39">smalltalk</option>
-	        <option value="3">java</option>
-	        <option value="14">bash</option>
-	        <option value="15">scala</option>
-	        <option value="43">java8</option>
-	        <option value="20">javascript</option>
-	        <option value="18">lua</option>
-	        <option value="44">db2</option>
-	        <option value="11">oracle</option>
-	        <option value="21">go</option>
-	        <option value="8">ruby</option>
-	        <option value="9">csharp</option>
-	        <option value="36">cobol</option>
-	        <option value="38">lolcode</option>
-	        <option value="13">clojure</option>
-	        <option value="12">haskell</option>
-	        <option value="7">php</option>
-	        <option value="50">rust</option>
-	        <option value="25">pascal</option>
-	        <option value="37">visualbasic</option>
-	        <option value="2">cpp</option>
-	        <option value="46">octave</option>
-	        <option value="42">tsql</option>
-	        <option value="41">whitespace</option>
-	        <option value="32">objectivec</option>
-	        <option value="10">mysql</option>
-	        <option value="22">d</option>
-	        <option value="23">ocaml</option>
-	        <option value="51">swift</option>
-	        <option value="48">xquery</option>
-	        <option value="33">fsharp</option>
-	        <option value="31">groovy</option>
-	        <option value="26">sbcl</option>
-	        <option value="6">perl</option>
-	        <option value="49">racket</option>
-	        <option value="40">tcl</option>
-	        <option value="24">r</option>
-	        <option value="5">python</option>
-	        <option value="30">python3</option>
-	        <option value="16">erlang</option>
-	    </select><br><br>
-        <div class="panel-body" id="editor"></div>
-		</div>
-		<!-- submit btn -->
-		<button id="btn" class="pull-right btn btn-success">Submit</button>
-         
-		<input type="checkbox" id="custom-input-checkbox"> Use custom input to test the code<br>
-		<div class="panel panel-default">
-			  <div class="panel-body">
-			  	<textarea id="custom-input" placeholder="Enter your testcases here..." class="form-control" rows="5"></textarea>
-			  </div>
-			</div>
-		
-		<div class="panel panel-default">
-			  <div class="panel-body" id="output">
-			  	Yout output:
-			  </div>
-			</div>
-		<!-- end of row -->
-       </div>
+ {% include "includes/editor.html" %}
+        
 {% load static %}
 <script src="{% static 'compiler/src-min/ace.js' %}" type="text/javascript" charset="utf-8"></script>
 
@@ -137,15 +75,27 @@
 
 
     });
+    
+     // toggles testcases box   
+     $('#custom-input-checkbox').click(function () {
+
+        $("#testcases").slideToggle();
+
+    });   
+
 
     $("#btn").on("click", function () {
-        $(this).html("Submiting..... ");
+        $("#output").html("Submitting..");
         var source = editor.getValue();
         var caseData = $("#data").data("case");
         var test = caseData.split("\n");
+        // disable submit btn 
+        $("#btn").prop('disabled', true)
+
         if( $("#custom-input-checkbox").prop('checked') == true ){
-			test = $("#custom-input").val().split("\n");
+			test = $("#testcases").val().split("\n");
 			};
+
         var myTest = JSON.stringify(test);
         alert(myTest);
         $.ajax(
@@ -166,6 +116,8 @@
 
 
                 success: function (request) {
+                    // enables submit btn
+                    $("#btn").prop('disabled', false)
                     if(request.result.message == "Success"){
                         $("#output").html(String(request.result.stdout).replace("\n","<br>"));
                     }else{
@@ -180,14 +132,15 @@
                     })
 
                 },
-
-                error:function (err) {
+                
+                    error:function (err) {
+                    // enables submit btn
+                    $("#btn").prop('disabled', false)
                     alert("Something went wrong please try again");
                     $("#btn").html("Submit");
                     $("#output").html(err)
                 },
             })
-
 
     })
 
