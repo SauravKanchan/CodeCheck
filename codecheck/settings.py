@@ -26,10 +26,11 @@ SECRET_KEY = 'v@_#ng$lpa*biq!iob%8o(mns%yfx6x8zcnb)5t*8+07&k5uts'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+CORS_ORIGIN_ALLOW_ALL = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,10 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+
     'compiler',
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'codecheck.middleware.crossdomainxhr.XsSharing',
+
 ]
 
 ROOT_URLCONF = 'codecheck.urls'
@@ -126,4 +129,14 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
 ]
 
+#
+# CORS_ORIGIN_WHITELIST = (
+#     'google.com',
+#     'localhost:8000',
+#     'api.hackerrank.com',
+# )
+#
+
+
 DEFAULT_POINTS = 100
+API_KEY = "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e"  #your API-KEY here
