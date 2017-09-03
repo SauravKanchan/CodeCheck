@@ -42,6 +42,8 @@ INSTALLED_APPS = [
 
 
     'compiler',
+    'userprofile',
+    'practice',
 ]
 
 MIDDLEWARE = [
@@ -129,13 +131,6 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
 ]
 
-#
-# CORS_ORIGIN_WHITELIST = (
-#     'google.com',
-#     'localhost:8000',
-#     'api.hackerrank.com',
-# )
-#
 ERROR_MESSAGE = "Something went wrong please try again"
 
 DEFAULT_POINTS = 100

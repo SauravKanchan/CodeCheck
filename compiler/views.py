@@ -1,6 +1,4 @@
 from django.shortcuts import render,render_to_response,HttpResponse
-from .models import Question
-from django.views.generic import ListView,DetailView
 from .compiler import HackerRankAPI
 from django.conf import settings
 import json
@@ -29,16 +27,3 @@ def result(request):
     else:
         return render_to_response('code_editor.html', locals())
 
-class QuestionList(ListView):
-    model = Question
-
-
-class QuestionDetail(DetailView):
-
-    model = Question
-
-    def get_context_data(self, **kwargs):
-
-        context = super(QuestionDetail, self).get_context_data(**kwargs)
-
-        return context
