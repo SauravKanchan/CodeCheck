@@ -115,7 +115,7 @@
 
                 success: function (output) {
 
-                    var str = (request.result.compilemessage).toString();
+                    var str = (output.output).toString();
                      str=decodeURIComponent(escape(str));
                  $("#output").html(str);
                 },
