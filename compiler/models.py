@@ -4,6 +4,7 @@ from django.conf import settings
 class Question(models.Model):
     title = models.CharField(max_length=400)
     testcases = models.TextField(max_length=10000)
+    testcases_output = models.TextField(max_length=10000,default="")
     inputs = models.TextField(max_length=50000)
     points = models.PositiveIntegerField(default=settings.DEFAULT_POINTS)
     right_count = models.PositiveIntegerField(default=0)

@@ -5,8 +5,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiler/models.py" afterPath="$PROJECT_DIR$/compiler/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiler/templates/code_editor.html" afterPath="$PROJECT_DIR$/compiler/templates/code_editor.html" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codecheck/settings.py" afterPath="$PROJECT_DIR$/codecheck/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiler/views.py" afterPath="$PROJECT_DIR$/compiler/views.py" />
+=======
+>>>>>>> sulphurgfx-master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,6 +58,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compiler/models.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,12 +72,25 @@
                 <marker date="1504431291630" expanded="true" signature="731:811" ph="..." />
                 <marker date="1504431291630" expanded="true" signature="825:906" ph="..." />
                 <marker date="1504431291630" expanded="true" signature="931:957" ph="..." />
+=======
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiler/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+>>>>>>> sulphurgfx-master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="question_detail.html" pinned="false" current-in-tab="false">
+=======
+      <file leaf-file-name="question_detail.html" pinned="false" current-in-tab="true">
+>>>>>>> sulphurgfx-master
         <entry file="file://$PROJECT_DIR$/compiler/templates/question_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -96,6 +113,7 @@
       <file leaf-file-name="code_editor.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compiler/templates/code_editor.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-459">
               <caret line="82" column="4" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
               <folding>
@@ -109,6 +127,11 @@
                 <marker date="1504431291638" expanded="true" signature="4291:4468" ph="{...}" />
                 <marker date="1504431291638" expanded="true" signature="4508:4608" ph="{...}" />
               </folding>
+=======
+            <state relative-caret-position="119">
+              <caret line="116" column="4" lean-forward="false" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+              <folding />
+>>>>>>> sulphurgfx-master
             </state>
           </provider>
         </entry>
@@ -171,9 +194,11 @@
         <option value="$PROJECT_DIR$/compiler/templates/tp.js" />
         <option value="$PROJECT_DIR$/compiler/templates/result.html" />
         <option value="$PROJECT_DIR$/compiler/__init__.py" />
-        <option value="$PROJECT_DIR$/compiler/templates/code_editor.html" />
         <option value="$PROJECT_DIR$/codecheck/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/compiler/views.py" />
+        <option value="$PROJECT_DIR$/compiler/models.py" />
+        <option value="$PROJECT_DIR$/compiler/templates/code_editor.html" />
       </list>
     </option>
   </component>
@@ -943,6 +968,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/compiler/templates/question_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -951,6 +977,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> sulphurgfx-master
     <entry file="file://$PROJECT_DIR$/compiler/static/compiler/css/theme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1024,8 +1052,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compiler/templates/code_editor.html">
+    <entry file="file://$PROJECT_DIR$/codecheck/settings.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-459">
           <caret line="82" column="4" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
           <folding>
@@ -1039,13 +1068,18 @@
             <marker date="1504431291638" expanded="true" signature="4291:4468" ph="{...}" />
             <marker date="1504431291638" expanded="true" signature="4508:4608" ph="{...}" />
           </folding>
+=======
+        <state relative-caret-position="333">
+          <caret line="138" column="54" lean-forward="false" selection-start-line="138" selection-start-column="54" selection-end-line="138" selection-end-column="54" />
+          <folding />
+>>>>>>> sulphurgfx-master
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codecheck/settings.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="138" column="54" lean-forward="false" selection-start-line="138" selection-start-column="54" selection-end-line="138" selection-end-column="54" />
+        <state relative-caret-position="24">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1057,6 +1091,32 @@
           <folding>
             <element signature="e#0#67#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/templates/code_editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="116" column="4" lean-forward="false" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiler/templates/question_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
