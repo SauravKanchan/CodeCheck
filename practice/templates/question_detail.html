@@ -1,15 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-<nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#"> CodeCheck </a>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"> Logout </a></li>
-            </ul>
-        </div>
-    </nav>
     <div class="container">
         <div class="row">
            <div class="panel panel-default">
@@ -49,94 +39,10 @@
 			  <div class="panel-body">Wrong Count: {{question.wrong_count}}</div>
 			</div>
           
-        {% include "includes/editor.html" %}
+        {% include 'code_editor.html' %}
         
 		<!-- end of row -->
        </div>
-{% load static %}
-<script src="{% static 'compiler/src-min/ace.js' %}" type="text/javascript" charset="utf-8"></script>
+    </div>
 
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    var lang=1;
-    editor.getSession().setMode("ace/mode/c_cpp");
-
-    $("#language").change(function () {
-        lang=$(this).val();
-        var l =($("select option:selected").text());
-        if (l=="python" || l=="python3")
-            {editor.getSession().setMode("ace/mode/python");}
-        else if (l=="c"){
-            editor.getSession().setMode("ace/mode/c_cpp");
-        }
-        else{
-            editor.getSession().setMode("ace/mode/"+l);
-        }
-
-
-    });
-    
-    // used for sliding the testcases box
-    $('#custom-input-checkbox').click(function () {
-
-        $("#testcases").slideToggle();
-
-    });  
-
-    $("#btn").on("click", function () {
-        $(this).html("Submiting..... ");
-        var source = editor.getValue();
-        var caseData = $("#data").data("case");
-        var test = caseData.split("\n");
-        if( $("#custom-input-checkbox").prop('checked') == true ){
-			test = $("#custom-input").val().split("\n");
-			};
-        var myTest = JSON.stringify(test);
-        alert(myTest);
-        $.ajax(
-            {
-                type: "POST",
-                url: "http://api.hackerrank.com/checker/submission.json",
-                data: {
-
-                    source: source,
-                    lang: lang,
-                    testcases:myTest,
-//
-                    api_key: "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e",
-                    wait: true,
-//                    callbackUrl: 'http://localhost:8000/',
-                    format: 'json'
-                },
-
-
-                success: function (request) {
-                    if(request.result.message == "Success"){
-                        $("#output").html(String(request.result.stdout).replace("\n","<br>"));
-                    }else{
-                        alert(request.result.c);
-                        var str = (request.result.compilemessage).toString();
-                        str=decodeURIComponent(escape(str));
-                        $("#output").html(str);
-                    }
-                    $("#btn").html("Submit");
-                    $.ajax({
-//                        url =
-                    })
-
-                },
-
-                error:function (err) {
-                    alert("Something went wrong please try again");
-                    $("#btn").html("Submit");
-                    $("#output").html(err)
-                },
-            })
-
-
-    })
-
-
-</script>
-{% endblock %}
+{% endblock content %}
