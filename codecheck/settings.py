@@ -124,7 +124,7 @@ STATICFILES_DIRS = [
 ]
 
 
-EXCLUDED_URL = ["/login/","/logout/","/signup/"]
+EXCLUDED_URL = ["/login/","/logout/","/signup/","/admin","/admin/"]
 
 ERROR_MESSAGE = "Something went wrong please try again"
 CORECT_SUBMISSION_MESSAGE = "Correct"
