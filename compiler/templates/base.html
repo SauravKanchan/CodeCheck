@@ -24,9 +24,10 @@
                 <a class="navbar-brand" href="{% url 'compiler' %}">Compiler</a>
                 <a class="navbar-brand" href="{% url 'question-list' %}">Practice</a>
                 {% if user.is_authenticated %}
-                <a class="navbar-brand" href="{% url 'logout' %}">{{ user.get_username }}</a>
+                
+                <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
                 {% endif %}
-                <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>   
+                   
                 
             </div>
             
