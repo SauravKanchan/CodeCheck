@@ -8,7 +8,6 @@
 {% block content %}
 <form id = "data">
     {% csrf_token %}
-
            <style type="text/css" media="screen">
     #editor {
         position: absolute;
@@ -99,7 +98,7 @@
             <textarea id="testcases" placeholder="Enter your testcases here..." ></textarea>
         </div>
         <div class="container innermost">
-            <div id="output">
+            <div id="output" class="well">
                 <h4>Output:</h4>
             </div>
         </div>
