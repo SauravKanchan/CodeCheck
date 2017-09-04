@@ -1,6 +1,8 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate,logout
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+from django.shortcuts import HttpResponseRedirect
+from django.contrib import messages
 
 
 def signup(request):
@@ -21,3 +23,7 @@ def profile(requests):
     context = {'name':requests.user.username}
     return render(requests,'profile.html',context)
 
+def logout_view(request):
+    logout(request)
+    messages.add_message(request, messages.SUCCESS, 'Successfully Logged Out')
+    return HttpResponseRedirect('/login/')
