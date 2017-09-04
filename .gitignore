@@ -10,7 +10,8 @@ env/Scripts/
 # C extensions
 *.so
 .idea/workspace.xml
-
+.idea/
+.idea
 # Distribution / packaging
 .Python
 build/
