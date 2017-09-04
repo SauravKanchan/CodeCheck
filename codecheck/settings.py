@@ -123,6 +123,9 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
 ]
 
+
+EXCLUDED_URL = ["/login/","/logout/","/signup/"]
+
 ERROR_MESSAGE = "Something went wrong please try again"
 CORECT_SUBMISSION_MESSAGE = "Correct"
 INCORECT_SUBMISSION_MESSAGE = "Wrong Answer"

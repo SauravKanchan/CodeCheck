@@ -5,6 +5,7 @@
 
 """
 from django.shortcuts import HttpResponseRedirect
+from django.conf import settings
 
 class AuthRequiredMiddleware(object):
     def __init__(self, get_response):
@@ -16,7 +17,7 @@ class AuthRequiredMiddleware(object):
 
         response = self.get_response(request)
         url = request.path_info
-        if not request.user.is_authenticated() and url not in ["/login/","/logout/"]:
+        if not request.user.is_authenticated() and url not in settings.EXCLUDED_URL:
             return HttpResponseRedirect('/login')
 
         # Code to be executed for each request/response after
