@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Django Lib">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/Lib/site-packages" />
+      <root url="file://$PROJECT_DIR$/env/Lib/site-packages" />
     </CLASSES>
     <SOURCES />
   </library>

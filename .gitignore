@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 db.sqlite3
 lib/
-Scripts/
+env/Scripts/
 
 *pyc
 # C extensions
@@ -101,3 +101,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+codecheck/static/
