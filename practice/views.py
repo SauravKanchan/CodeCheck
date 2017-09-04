@@ -4,8 +4,19 @@ from django.views.generic import ListView,DetailView
 from compiler.compiler import HackerRankAPI
 from django.conf import settings
 import json
-
-
+import operator
+def leaderboard(request):
+    context = {}
+    l = {}
+    users = User.objects.all()
+    for i in users:
+        try:
+            l[i.username] = i.profile.points
+        except:
+            pass
+    leaderboard = sorted(l.items(), key=operator.itemgetter(1))
+    leaderboard.reverse()
+    return render(request,"leaderboard.html",{"leaderboard":leaderboard})
 
 def track(request,id):
     questions = Question.objects.all()

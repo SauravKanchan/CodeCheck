@@ -11,6 +11,9 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     points = models.IntegerField(default=0)
 
+    def get_points(self):
+        return self.points
+
     def add_points(self,points):
         self.points += points
         self.save()

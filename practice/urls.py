@@ -14,5 +14,6 @@ urlpatterns = [
     url('^test',test,name="test"),
     url(r'^tracks/(?P<id>\d+)',track,name="track"),
     url('^tracks/',all_tracks,name="alltracks"),
+    url(r"^leaderboard",leaderboard,name="leaderboard")
 
 ]
