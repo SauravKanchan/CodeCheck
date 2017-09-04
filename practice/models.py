@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import json
 
 class Track(models.Model):
     title = models.CharField(max_length=200)
@@ -35,10 +36,10 @@ class Question(models.Model):
         return 100-self.get_percentage_correct()
 
     def test(self,output,user):
-        if output.lstrip().rstrip()==self.output.lstrip().rstrip():
+        if output.lstrip().rstrip()==self.output.lstrip().rstrip().replace("\r",""):
             if Record.objects.filter(user=user,question=self).exists():
                 pass
-                for i in range(100):print("already exists")
+                for i in range(10):print("already exists")
             else:
                 self.right_count += 1
                 self.save()
