@@ -1,9 +1,22 @@
 from django.shortcuts import render,HttpResponse,render_to_response
-from .models import Question
+from .models import *
 from django.views.generic import ListView,DetailView
 from compiler.compiler import HackerRankAPI
 from django.conf import settings
 import json
+
+
+
+def track(request,id):
+    questions = Question.objects.all()
+    t = Track.objects.get(id=id)
+    questions = questions.filter(track=t)
+    context={"questions":questions}
+    return render(request,"tracks.html",context)
+
+def all_tracks(request):
+    track = Track.objects.all()
+    return render(request,"all_tracks.html",{'track':track})
 
 class QuestionList(ListView):
     model = Question
