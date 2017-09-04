@@ -2,7 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+db.sqlite3
+lib/
+Scripts/
 
+*pyc
 # C extensions
 *.so
 .idea/workspace.xml
