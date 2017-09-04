@@ -15,7 +15,7 @@ class Question(models.Model):
     description = models.TextField(max_length=1000,null=True)
     testcases = models.TextField(max_length=100)
     testcases_output = models.TextField(max_length=100,default="")
-    explanation = models.TextField(max_length=1000,null=True)
+    explanation = models.TextField(max_length=1000,blank=True,null=True)
     inputs = models.TextField(max_length=50000)
     output = models.TextField(max_length=10000)
     points = models.PositiveIntegerField(default=settings.DEFAULT_POINTS)
