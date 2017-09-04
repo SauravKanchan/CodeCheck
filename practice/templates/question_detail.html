@@ -5,7 +5,16 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Question</div>
                 <div class="panel-body">{{ question.title }}</div>
+
             </div>
+        {% if question.description %}
+            <div class="panel panel-default">
+                <div class="panel-heading">Description</div>
+                <div class="panel-body">{{ question.description }}</div>
+
+            </div>
+        {% endif %}
+
 
             <div class="panel panel-default">
                 <div class="panel-heading">Test Cases</div>
@@ -15,10 +24,25 @@
                     {% endfor %}
                 </div>
             </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Testcases output</div>
+                <div class="panel-body">
+                    {% for i in question.testcases_output %}
+                        {{ i|linebreaksbr }}
+                    {% endfor %}
+                </div>
+            </div>
 
 
             <meta id="data" data-case="{{ question.testcases }}">
 
+        {% if question.explanation %}
+            <div class="panel panel-default">
+                <div class="panel-heading">Explanation</div>
+                <div class="panel-body">{{ question.explanation }}</div>
+
+            </div>
+        {% endif %}
             <div class="panel panel-default">
                 <div class="panel-body">Points: {{ question.points }}</div>
 

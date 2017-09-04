@@ -12,14 +12,16 @@ from django.conf import settings
 class Question(models.Model):
     track = models.ForeignKey(Track,on_delete=models.CASCADE)
     title = models.CharField(max_length=400)
-    description = models.CharField(max_length=1000,default="")
+    description = models.TextField(max_length=1000,null=True)
     testcases = models.TextField(max_length=100)
     testcases_output = models.TextField(max_length=100,default="")
+    explanation = models.TextField(max_length=1000,null=True)
     inputs = models.TextField(max_length=50000)
     output = models.TextField(max_length=10000)
     points = models.PositiveIntegerField(default=settings.DEFAULT_POINTS)
     right_count = models.PositiveIntegerField(default=0)
     wrong_count = models.PositiveIntegerField(default=0)
+
 
     def total_submission(self):
         return self.wrong_count+self.right_count
