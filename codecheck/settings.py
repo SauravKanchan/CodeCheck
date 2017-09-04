@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'codecheck.middleware.AuthRequiredMiddleware.AuthRequiredMiddleware'
 
 ]
@@ -115,6 +116,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
@@ -133,3 +135,4 @@ INCORECT_SUBMISSION_MESSAGE = "Wrong Answer"
 
 DEFAULT_POINTS = 100
 API_KEY = "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e"  #your API-KEY here
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
