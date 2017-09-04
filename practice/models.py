@@ -27,8 +27,10 @@ class Question(models.Model):
         return self.wrong_count+self.right_count
 
     def get_percentage_correct(self):
-        return (self.right_count*100)/(self.wrong_count+self.right_count)
-
+        try:
+            return (self.right_count*100)/(self.wrong_count+self.right_count)
+        except ZeroDivisionError:
+            return 0
     def get_percentage_wrong(self):
         return 100-self.get_percentage_correct()
 
