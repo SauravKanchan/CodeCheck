@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^compiler/',include('compiler.urls')),
     url(r'^practice/',include('practice.urls')),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^',include('userprofile.urls'))
 ]
