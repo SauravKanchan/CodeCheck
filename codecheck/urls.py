@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^compiler/',include('compiler.urls')),
     url(r'^practice/',include('practice.urls')),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^',include('userprofile.urls'))
+    url(r'^contests/',include('contests.urls')),
+    url(r'^',include('userprofile.urls')),
 ]

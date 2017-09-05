@@ -28,6 +28,8 @@ class Contest(models.Model):
             return 1
         else:
             return -1
+    def get_start_date(self):
+        return str(self.start_date)
 
     def end_contest(self):
         # Addig all the contest's questions to practice questions
