@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'codecheck.middleware.AuthRequiredMiddleware.AuthRequiredMiddleware'
     
 
 ]
@@ -131,7 +132,11 @@ STATICFILES_DIRS = [
 ]
 
 
-EXCLUDED_URL = ["/login/","/logout/","/signup/","/admin","/admin/"]
+LOGIN_URL = "/accounts/login/"
+LOGOUT_URL = "/accounts/logout/"
+SIGNUP_URL = "/accounts/signup/"
+
+EXCLUDED_URL = [LOGIN_URL,LOGOUT_URL,SIGNUP_URL,"/admin/"]
 
 ERROR_MESSAGE = "Something went wrong please try again"
 CORECT_SUBMISSION_MESSAGE = "Correct"
