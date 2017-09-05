@@ -17,4 +17,11 @@
         <a href="{% url 'alltracks' %}">Solve questions</a>
         {% endif %}
     {% endif %}
+
+    <div>
+        <a class="btn btn-primary" href="{% url 'account_reset_password' %}">Change Password</a>
+        <a class="btn btn-primary" href="{% url 'account_email' %}">Change Email</a>
+        <p>View Connected Social Media Accounts</p>
+        <a class="btn btn-primary" href="{% url 'socialaccount_connections' %}">Connected Accounts</a>
+    </div>
 {% endblock %}

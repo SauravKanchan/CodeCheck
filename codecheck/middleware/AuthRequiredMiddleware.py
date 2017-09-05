@@ -18,7 +18,7 @@ class AuthRequiredMiddleware(object):
         response = self.get_response(request)
         url = request.path_info
         if not request.user.is_authenticated() and url not in settings.EXCLUDED_URL:
-            return HttpResponseRedirect('/login')
+            return HttpResponseRedirect('/account/login')
 
         # Code to be executed for each request/response after
         # the view is called.

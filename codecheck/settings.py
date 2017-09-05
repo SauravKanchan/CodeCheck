@@ -32,11 +32,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
 
 
     'compiler',
     'userprofile',
     'practice',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'codecheck.middleware.AuthRequiredMiddleware.AuthRequiredMiddleware'
+    
 
 ]
 
@@ -135,3 +141,18 @@ INCORECT_SUBMISSION_MESSAGE = "Wrong Answer"
 DEFAULT_POINTS = 100
 API_KEY = "hackerrank|1768852-1838|9171dce1a42a9fc576f587160de2ccf6762a635e"  #your API-KEY here
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+# Django allauth config
+AUTHENTICATION_BACKENDS = (
+  
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
+
+SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION='none'
