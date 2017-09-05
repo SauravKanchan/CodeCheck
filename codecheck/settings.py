@@ -79,7 +79,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'codecheck.wsgi.application'
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 # Database

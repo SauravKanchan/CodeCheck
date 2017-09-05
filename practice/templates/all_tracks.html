@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <a href="{% url 'leaderboard' %}" class="pull-right well">View Leaderboard</a>
     <h2>All tracks</h2>
     <div class="row">
     {% for t in track %}
