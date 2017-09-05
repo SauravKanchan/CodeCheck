@@ -5,15 +5,13 @@ from compiler.compiler import HackerRankAPI
 from django.conf import settings
 import json
 import operator
+from userprofile.models import Profile
 def leaderboard(request):
     context = {}
     l = {}
-    users = User.objects.all()
-    for i in users:
-        try:
-            l[i.username] = i.profile.points
-        except:
-            pass
+    profiles = Profile.objects.all()
+    for profile in profiles:
+        l[profile] = profile.points
     leaderboard = sorted(l.items(), key=operator.itemgetter(1))
     leaderboard.reverse()
     return render(request,"leaderboard.html",{"leaderboard":leaderboard})

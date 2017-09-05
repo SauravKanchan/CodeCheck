@@ -12,9 +12,9 @@
       </tr>
     </thead>
     <tbody>
-    {% for user,points in leaderboard %}
+    {% for profile,points in leaderboard %}
       <tr>
-        <td>{{user}}</td>
+          <td><a href="{% url 'general_profile' profile.user.id %}">{{profile}}</a></td>
         <td>{{points}}</td>
 
       </tr>

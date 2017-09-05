@@ -4,15 +4,17 @@
 {% endblock %}
 {% block content %}
 
-    Welcome {{ name }}<br>
-    Your total points {{ points }}<br>
+    <h1>{{ name }}</h1><br>
+    Total points:- {{ points }}<br>
     {% if solved %}
     Solved questions:-<br>
     {% for question in solved %}
         <li>{{ question }}</li>
     {% endfor %}
-    {% else %}
+    {% else   %}
+        {% if name is request.user.username %}
         <h4>No questions solved</h4>
         <a href="{% url 'alltracks' %}">Solve questions</a>
+        {% endif %}
     {% endif %}
 {% endblock %}

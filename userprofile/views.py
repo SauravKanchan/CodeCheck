@@ -5,6 +5,8 @@ from django.shortcuts import HttpResponseRedirect
 from django.contrib import messages
 from practice.models import Record
 from .models import Profile
+from django.contrib.auth.models import User
+
 
 def signup(request):
     if request.method == 'POST':
@@ -21,12 +23,30 @@ def signup(request):
     return render(request, 'registration/signup.html', {'form': form})
 
 def profile(requests):
-    context = {'name':requests.user.username}
-    solved = Record.objects.all().filter(user=requests.user)
-    profile = Profile.objects.get_or_create(user=requests.user)[0]
+    context = {}
+    user = requests.user
+    context['name']=user.username
+    for i in range(100):print(context['name'])
+    solved = Record.objects.all().filter(user=user)
+    profile = Profile.objects.get_or_create(user=user)[0]
     context['solved'] = solved
     context['points'] = profile.points
+
     return render(requests,'profile.html',context)
+
+def profiles(requests,id):
+    context = {}
+    user = User.objects.get(id=id)
+    context['name']=user.username
+    for i in range(100):print(context['name'])
+    solved = Record.objects.all().filter(user=user)
+    profile = Profile.objects.get_or_create(user=user)[0]
+    context['solved'] = solved
+    context['points'] = profile.points
+
+    return render(requests,'profile.html',context)
+
+
 
 def logout_view(request):
     logout(request)
