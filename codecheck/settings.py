@@ -157,3 +157,10 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION='none'
+
+# gmail smtp settings to send emails
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'csicodecheck@gmail.com' 
+EMAIL_HOST_PASSWORD = 'code@1234'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
