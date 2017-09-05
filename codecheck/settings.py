@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
 
-
+    'crispy_forms',
     'compiler',
     'userprofile',
     'practice',
@@ -163,3 +163,5 @@ EMAIL_HOST_USER = 'csicodecheck@gmail.com'
 EMAIL_HOST_PASSWORD = 'code@1234'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
