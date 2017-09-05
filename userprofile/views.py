@@ -26,7 +26,6 @@ def profile(requests):
     context = {}
     user = requests.user
     context['name']=user.username
-    for i in range(100):print(context['name'])
     solved = Record.objects.all().filter(user=user)
     profile = Profile.objects.get_or_create(user=user)[0]
     context['solved'] = solved
@@ -38,7 +37,6 @@ def profiles(requests,id):
     context = {}
     user = User.objects.get(id=id)
     context['name']=user.username
-    for i in range(100):print(context['name'])
     solved = Record.objects.all().filter(user=user)
     profile = Profile.objects.get_or_create(user=user)[0]
     context['solved'] = solved
