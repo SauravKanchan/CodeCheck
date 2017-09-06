@@ -9,8 +9,8 @@ def contests(request):
 
 def contest(request,id):
     context={}
-    contests = Contest.objects.all()
-    context['contests'] = contests
-    return render(request,"contests.html",context)
+    cont = Contest.objects.get(id=id)
+    context['contest']=contest
+    return render(request,"contest_detail.html",context)
 
 
