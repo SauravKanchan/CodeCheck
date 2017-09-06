@@ -6,7 +6,6 @@ dj-static==0.0.6
 Django==1.11.4
 django-allauth==0.33.0
 django-crispy-forms==1.6.1
-gunicorn==19.7.1
 idna==2.6
 oauthlib==2.0.2
 psycopg2==2.7.3.1
