@@ -77,7 +77,7 @@ class ContestQuestion(models.Model):
 
     def get_percentage_correct(self):
         try:
-            return (self.right_count*100)/(self.wrong_count+self.right_count)
+            return "%.2f" %((self.right_count*100)/(self.wrong_count+self.right_count))
         except ZeroDivisionError:
             return 0
     def get_percentage_wrong(self):
