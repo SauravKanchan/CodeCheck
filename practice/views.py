@@ -6,6 +6,9 @@ from django.conf import settings
 import json
 import operator
 from userprofile.models import Profile
+from django.core.mail import send_mail
+
+
 def leaderboard(request):
     context = {}
     l = {}
