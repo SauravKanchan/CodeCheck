@@ -1,11 +1,16 @@
 from django.shortcuts import render
-from .models import Contest
+from .models import Contest,Track,Question
 # Create your views here.
-def contests(requests):
+def contests(request):
     context={}
     contests = Contest.objects.all()
     context['contests'] = contests
-    return render(requests,"contests.html",context)
+    return render(request,"contests.html",context)
 
-def contest(requests,id):
-    pass
+def contest(request,id):
+    context={}
+    contests = Contest.objects.all()
+    context['contests'] = contests
+    return render(request,"contests.html",context)
+
+

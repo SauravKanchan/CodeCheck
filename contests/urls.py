@@ -7,8 +7,7 @@
 from django.conf.urls import url,include
 from .views import *
 urlpatterns = [
-    url(r'^$',contests,name="contests"),
-    url(r'^(?P<id>\d+)',contest,name="contest"),
-    url(r'^practice/',include('practice.urls')),
 
+    url(r'^(?P<id>\d+)/',contest,name="contest_detail"),
+    url(r'^$',contests,name="contests"),
 ]

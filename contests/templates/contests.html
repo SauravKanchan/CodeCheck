@@ -10,7 +10,7 @@
                         <h4 id="startdate{{ contest.id }}" style="display: none">{{ contest.get_start_date }}</h4>
                         <h5>{{ contest.description }}</h5>
                         <h5>{{ contest.start_date }}</h5>
-                        <p><a class="btn btn-primary" id="{{ contest.id }}"> </a></p>
+                        <p><a class="btn btn-primary" id="{{ contest.id }}" href="#"> </a></p>
                     </div>
                 </div>
             </div>
@@ -47,11 +47,11 @@
                 if (distance < 0) {
                     clearInterval(x);
                     document.getElementById(id).innerHTML = "Start Test";
-{#                    $(id).href(href="{% url 'contest' id %}" );#}
+                    var z=String("{% url 'contest_detail' 99999 %}").replace("99999",id);
+                    $(id).attr("href",z );
                 }
             }, 1000);
         }
-
         var date;
         {% if contests %}
             {% for contest in contests %}
