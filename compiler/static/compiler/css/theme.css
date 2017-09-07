@@ -118,4 +118,16 @@ ol li.list-group-item {
 
 #nav-main{
     background: #199EB8;
+    height: 70px;
+}
+
+#facebook-nav{
+    color: white;
+    margin-right: 40px;
+    
+    padding-top: !important 30px; 
+}
+
+#logo{
+    max-height: 30px !important;
 }
