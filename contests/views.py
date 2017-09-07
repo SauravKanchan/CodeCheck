@@ -33,17 +33,24 @@ def contests(request):
 def contest(request,id):
     context={}
     cont = Contest.objects.get(id=id)
-    context['contest']=cont
-    cont.start_contest()
-    questions = ContestQuestion.objects.all().filter(contest=cont)
-    q={}
-    for question in questions:
-       q[question]=float(question.get_percentage_correct())
-    sorted_question = sorted(q.items(), key=operator.itemgetter(1))
-    sorted_question.reverse()
-    context['questions']=sorted_question
-    leaderboard = Leaderboard.objects.get_or_create(contest=cont)[0].get_leaderboard()
-    context['leaderboard']=leaderboard
+    if cont.status() == 1:
+        context['valid']=True
+        context['contest']=cont
+        cont.start_contest()
+        questions = ContestQuestion.objects.all().filter(contest=cont)
+        q={}
+        for question in questions:
+           q[question]=float(question.get_percentage_correct())
+        sorted_question = sorted(q.items(), key=operator.itemgetter(1))
+        sorted_question.reverse()
+        context['questions']=sorted_question
+        leaderboard = Leaderboard.objects.get_or_create(contest=cont)[0].get_leaderboard()
+        context['leaderboard']=leaderboard
+    elif cont.status() == -1:
+        leaderboard = Leaderboard.objects.get_or_create(contest=cont)[0].get_leaderboard()
+        return render(request,"leaderboard.html",context)
+    else:
+        context['status']="Contest has not yet started"
     return render(request,"contest_detail.html",context)
 
 def contest_question(request,contest_id,question_id):
