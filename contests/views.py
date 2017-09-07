@@ -21,7 +21,7 @@ def contest(request,id):
     questions = ContestQuestion.objects.all().filter(contest=cont)
     q={}
     for question in questions:
-       q[question]=question.get_percentage_correct()
+       q[question]=float(question.get_percentage_correct())
     sorted_question = sorted(q.items(), key=operator.itemgetter(1))
     sorted_question.reverse()
     context['questions']=sorted_question
