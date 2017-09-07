@@ -12,11 +12,12 @@
                         <h4 id="startdate{{ contest.id }}" style="display: none">{{ contest.get_start_date }}</h4>
                         <h5>{{ contest.description }}</h5>
                         <h5>{{ contest.start_date }}</h5>
-                        <p><a class="btn btn-primary" id="{{ contest.id }}" href="#"> </a></p>
+                        <p><a class="btn btn-primary" id="{{ contest.id }}" href="{% url 'contest_detail' contest.id %}"> </a></p>
                     </div>
                 </div>
             </div>
         {% endfor %}
+
         {% endif %}
         {% if upcoming_contests %}
         {% for contest in upcoming_contests %}
@@ -52,9 +53,11 @@
             </div>
         {% endfor %}
         {% endif %}
+
     {% else %}
         <h2>No contests available</h2>
     {% endif %}
+    
     <script>
         // Set the date we're counting down to
         function timer(id,date) {
