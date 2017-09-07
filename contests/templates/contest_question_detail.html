@@ -64,11 +64,7 @@
             <p style="display: none" id="post_url">{{ post_url }}</p>
         {% endif %}
             <script>
-                {% if post_url %}
-                    var post_url = $("#post_url").text();
-                {% else %}
-                    var post_url = "{% url 'test' %}";
-                {% endif %}
+
                 $("#question-submit").on("click", function () {
                     $("#output").html("Submitting..");
                     // disable submit btn
@@ -76,7 +72,7 @@
                     $.ajax(
                         {
                             type: "POST",
-                            url: post_url,
+                            url: "{% url 'contest_test' %}",
                             data: {
 
                                 source: editor.getValue(),
@@ -97,7 +93,7 @@
 
                             error: function (err) {
                                 // enables submit btn
-                                $("#btn").prop('disabled', false)
+                                $("#btn").prop('disabled', false);
                                 $("#output").html("Something went wrong please try again");
                             },
                         })

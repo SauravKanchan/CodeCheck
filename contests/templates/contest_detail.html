@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-    {{ contest }}
 
-    {{ contest.title }}
+    {{ contest.title }}<br>
     {{ contest.description }}
+    {% if questions %}
+        <ol>
+        {% for question,success in questions %}
+            <li><a href="{% url 'contest_question' contest.id  question.id %}">{{ question }}-{{ success }}</a></li>
+        {% endfor %}
+        </ol>
+    {% endif %}
+    {% include 'leaderboard.html' %}
+
 
 {% endblock %}

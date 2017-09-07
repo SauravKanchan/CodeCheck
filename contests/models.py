@@ -17,7 +17,7 @@ class Contest(models.Model):
 
     def status(self):
         """
-        
+
          :return:  1 --> Contest is live
          :return: -1 --> Contest has finished
          :return:  0 --> Contest has not started
@@ -30,6 +30,14 @@ class Contest(models.Model):
             return -1
     def get_start_date(self):
         return str(self.start_date)
+
+    def start_contest(self):
+        """
+
+        :return: leaderboard
+        """
+        leaderboard = Leaderboard.objects.get_or_create(contest=self)
+        return leaderboard
 
     def end_contest(self):
         # Addig all the contest's questions to practice questions
@@ -84,14 +92,16 @@ class ContestQuestion(models.Model):
         return 100-self.get_percentage_correct()
 
     def test(self,output,user):
+        for i in range(100): print(ContestRecord.objects.all())
+
         if output.lstrip().rstrip()==self.output.lstrip().rstrip().replace("\r",""):
-            if ContestRecord.objects.filter(user=user,question=self).exists():
+            if len(ContestRecord.objects.all().filter(contest=self.contest,user=user,question=self))!=0:
                 pass
                 for i in range(10):print("already exists")
             else:
                 self.right_count += 1
                 self.save()
-                ContestRecord.objects.create(user = user,question=self)
+                ContestRecord.objects.create(user = user,question=self,contest=self.contest)
                 user.profile.add_points(self.points)
             return True
         else:
@@ -103,24 +113,27 @@ class ContestQuestion(models.Model):
         return self.title
 
 class ContestRecord(models.Model):
-    contest = models.ForeignKey(Contest,on_delete=models.CASCADE,related_name='ContestRecordContest')
-    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name="ContestRecordUser")
+    contest  = models.ForeignKey(Contest,on_delete=models.CASCADE,related_name='ContestRecordContest')
+    user     = models.ForeignKey(User,on_delete=models.CASCADE,related_name="ContestRecordUser")
     question = models.ForeignKey(ContestQuestion,on_delete=models.CASCADE,related_name="ContestRecordQuestion")
 
     def __str__(self):
-        return str(self.question)
+        return str(self.contest)+" -- "+str(self.question)+" -- "+str(self.user)
 
 class Leaderboard(models.Model):
     contest = models.ForeignKey(Contest)
 
     def get_leaderboard(self):
-        records = ContestRecord.objects.get(contest = self.contest)
+        try:
+            records = ContestRecord.objects.all().filter(contest = self.contest)
+        except:
+            records=[]
         l = {}
         for r in records:
             try:
-                l[r.user.username] += r.question.points
+                l[r.user.profile] += r.question.points
             except:
-                l[r.user.username] = r.question.points
-                l[r.user.username] = r.question.points
+                l[r.user.profile] = r.question.points
+                l[r.user.profile] = r.question.points
         leaderboard = sorted(l.items(), key=operator.itemgetter(1))
         return leaderboard
