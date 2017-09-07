@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% if contests %}
-        {% for contest in contests %}
+    {% if live_contest or upcoming_contests or past_contests %}
+        {% if live_contests %}
+        {% for contest in live_contests %}
+            <h3>Live Contests</h3>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="">
@@ -15,6 +17,42 @@
                 </div>
             </div>
         {% endfor %}
+
+        {% endif %}
+        {% if upcoming_contests %}
+        {% for contest in upcoming_contests %}
+            <h3>Upcoming Contests</h3>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="">
+                    <div class="caption">
+                        <h3>{{ contest.title }}</h3>
+                        <h4 id="startdate{{ contest.id }}" style="display: none">{{ contest.get_start_date }}</h4>
+                        <h5>{{ contest.description }}</h5>
+                        <h5>{{ contest.start_date }}</h5>
+                        <p><a class="btn btn-primary" id="{{ contest.id }}" href="#"> </a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% endif %}
+        {% if live_contests %}
+        {% for contest in past_contests %}
+            <h3>Past Contests</h3>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="">
+                    <div class="caption">
+                        <h3>{{ contest.title }}</h3>
+                        <h4 id="startdate{{ contest.id }}" style="display: none">{{ contest.get_start_date }}</h4>
+                        <h5>{{ contest.description }}</h5>
+                        <h5>{{ contest.start_date }}</h5>
+                        <p><a class="btn btn-primary" id="{{ contest.id }}" href="#"> </a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% endif %}
 
     {% else %}
         <h2>No contests available</h2>

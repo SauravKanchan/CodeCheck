@@ -10,7 +10,21 @@ from django.contrib.sites.shortcuts import get_current_site
 def contests(request):
     context={}
     contests = Contest.objects.all()
+    live = []
+    upcoming = []
+    past = []
+    for contest in contests:
+        if contest.status() == 1:
+            live.append(contest)
+        elif contest.status() == 0:
+            upcoming.append(contest)
+        elif contest.status() == -1:
+            past.append(contest)
+    context['live_contests'] = live
+    context['upcoming_contests'] = upcoming
+    context['past_contests'] = past
     context['contests'] = contests
+
     return render(request,"contests.html",context)
 
 def contest(request,id):
@@ -21,7 +35,7 @@ def contest(request,id):
     questions = ContestQuestion.objects.all().filter(contest=cont)
     q={}
     for question in questions:
-       q[question]=question.get_percentage_correct()
+       q[question]=float(question.get_percentage_correct())
     sorted_question = sorted(q.items(), key=operator.itemgetter(1))
     sorted_question.reverse()
     context['questions']=sorted_question
