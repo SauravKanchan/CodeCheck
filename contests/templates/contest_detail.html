@@ -1,16 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    {{ contest.title }}<br>
-    {{ contest.description }}
+    <div class="col-sm-3 col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-body">Contest: {{ contest.title }}</div>
+    </div>
+     <div class="panel panel-default">
+      <div class="panel-body">Description: {{ contest.description }}</div>
+    </div>
+    
     {% if questions %}
-        <ol>
+        <ol class="list-group">
         {% for question,success in questions %}
-            <li><a href="{% url 'contest_question' contest.id  question.id %}">{{ question }}-{{ success }}</a></li>
+            <li class="list-group-item"><a href="{% url 'contest_question' contest.id  question.id %}">{{ question }}-{{ success }}</a></li>
         {% endfor %}
         </ol>
     {% endif %}
+    </div>
+    <div class="col-sm-3 col-md-3">
     {% include 'leaderboard.html' %}
+    </div>
 
 
 {% endblock %}

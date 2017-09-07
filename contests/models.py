@@ -4,7 +4,7 @@ from django.conf import settings
 from practice.models import Track,Question
 from datetime import datetime
 import operator
-
+from django.utils import timezone
 
 class Contest(models.Model):
     title = models.CharField(max_length=200)
@@ -22,9 +22,9 @@ class Contest(models.Model):
          :return: -1 --> Contest has finished
          :return:  0 --> Contest has not started
         """
-        if datetime.now()<self.start_date:
+        if  timezone.now()<self.start_date:
             return 0
-        elif self.start_date<=datetime.now()<self.end_date:
+        elif self.start_date<= timezone.now()<self.end_date:
             return 1
         else:
             return -1
