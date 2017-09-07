@@ -63,6 +63,9 @@ class Contest(models.Model):
             )
         questions.delete()
 
+    def get_end_date(self):
+        return str(self.end_date)
+
     def __str__(self):
         return self.title
 

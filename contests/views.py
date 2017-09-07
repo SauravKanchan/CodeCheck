@@ -20,9 +20,12 @@ def contests(request):
             upcoming.append(contest)
         elif contest.status() == -1:
             past.append(contest)
-    context['live_contests'] = live
-    context['upcoming_contests'] = upcoming
-    context['past_contests'] = past
+    if len(live)!=0:
+        context['live_contests'] = live
+    if len(upcoming)!=0:
+        context['upcoming_contests'] = upcoming
+    if len(past)!=0:
+        context['past_contests'] = past
     context['contests'] = contests
 
     return render(request,"contests.html",context)
@@ -49,6 +52,8 @@ def contest_question(request,contest_id,question_id):
     context['question']=question
     context['contest_id']=contest_id
     context['post_url']="test/"
+    contest = Contest.objects.get(id=contest_id)
+    context['contest']=contest
     return render(request,"contest_question_detail.html",context)
 
 def contest_test(request):

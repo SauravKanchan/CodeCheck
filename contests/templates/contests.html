@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
     {% if live_contest or upcoming_contests or past_contests %}
+
         {% if live_contests %}
-        {% for contest in live_contests %}
+<div class="col-md-12">
             <h3>Live Contests</h3>
+        {% for contest in live_contests %}
+
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="">
@@ -17,11 +20,14 @@
                 </div>
             </div>
         {% endfor %}
+        </div>
+
 
         {% endif %}
         {% if upcoming_contests %}
+  <div class="col-md-12">
+                        <h3>Upcoming Contests</h3>
         {% for contest in upcoming_contests %}
-            <h3>Upcoming Contests</h3>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="">
@@ -35,10 +41,16 @@
                 </div>
             </div>
         {% endfor %}
+
+         </div>
+
         {% endif %}
-        {% if live_contests %}
-        {% for contest in past_contests %}
+
+        {% if past_contests %}
+<div class="col-md-12">
             <h3>Past Contests</h3>
+        {% for contest in past_contests %}
+
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="">
@@ -52,6 +64,7 @@
                 </div>
             </div>
         {% endfor %}
+</div>
         {% endif %}
 
     {% else %}
