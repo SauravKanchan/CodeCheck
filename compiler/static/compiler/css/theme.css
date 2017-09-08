@@ -1,10 +1,12 @@
 body {
-  padding-top: 70px;
+  
   padding-bottom: 30px;
   /*background-color:#E5FFF2 ;*/
   background-color:#ecf0f1;
 }
-
+#nav-main a{
+    color: #fff;
+}
 #spacing{
     padding-top:40%;
 }
@@ -133,4 +135,8 @@ ol li.list-group-item {
 }
 .table-fit {
     width: 1px;
+}
+.navbar-toggle{
+    background: #2c3e50;
+    color: white;
 }
