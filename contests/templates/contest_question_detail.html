@@ -12,7 +12,7 @@
         {% if question.description %}
             <div class="panel panel-default">
                 <div class="panel-heading">Description</div>
-                <div class="panel-body">{{ question.description }}</div>
+                <div class="panel-body">{{ question.description|linebreaks }}</div>
 
             </div>
         {% endif %}
@@ -41,7 +41,7 @@
         {% if question.explanation %}
             <div class="panel panel-default">
                 <div class="panel-heading">Explanation</div>
-                <div class="panel-body">{{ question.explanation }}</div>
+                <div class="panel-body">{{ question.explanation|linebreaks }}</div>
 
             </div>
         {% endif %}
