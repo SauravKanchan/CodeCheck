@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Contest,Track,ContestQuestion,Leaderboard
 import operator
 from django.conf import settings
@@ -48,6 +48,7 @@ def contest(request,id):
         context['leaderboard']=leaderboard
     elif cont.status(request.user) == -1:
         leaderboard = Leaderboard.objects.get(contest=cont).get_leaderboard()
+        for i in range(100):print(leaderboard)
         context['leaderboard'] = leaderboard
         return render(request,"leaderboard.html",context)
     else:
@@ -61,6 +62,8 @@ def contest_question(request,contest_id,question_id):
     context['contest_id']=contest_id
     context['post_url']="test/"
     contest = Contest.objects.get(id=contest_id)
+    if contest.status(request.user)==-1:
+        return redirect("/contests/"+contest_id)
     context['contest']=contest
     return render(request,"contest_question_detail.html",context)
 

@@ -158,21 +158,19 @@ class Leaderboard(models.Model):
         return leaderboard
 
     def set_leaderboard(self):
-        try:
+        if self.leaderboard=="[]":
             records = ContestRecord.objects.all().filter(contest=self.contest)
-        except:
-            records = []
-        l = {}
-        for r in records:
-            try:
-                l[r.user.profile.id] += r.question.points
-            except:
-                l[r.user.profile.id] = r.question.points
-                l[r.user.profile.id] = r.question.points
-        leaderboard = sorted(l.items(), key=operator.itemgetter(1))
-        leaderboard.reverse()
-        self.leaderboard = str(leaderboard)
-        self.save()
+            l = {}
+            for r in records:
+                try:
+                    l[r.user.profile.id] += r.question.points
+                except:
+                    l[r.user.profile.id] = r.question.points
+                    l[r.user.profile.id] = r.question.points
+            leaderboard = sorted(l.items(), key=operator.itemgetter(1))
+            leaderboard.reverse()
+            self.leaderboard = str(leaderboard)
+            self.save()
         return self.leaderboard
 
     def __str__(self):
