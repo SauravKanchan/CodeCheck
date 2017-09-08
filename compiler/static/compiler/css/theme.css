@@ -131,3 +131,6 @@ ol li.list-group-item {
 #logo{
     max-height: 30px !important;
 }
+.table-fit {
+    width: 1px;
+}

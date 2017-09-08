@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+<br>
+<div class="container">
     <div class="col-sm-3 col-md-9">
     <div class="panel panel-default">
       <div class="panel-body">Contest: {{ contest.title }}</div>
@@ -19,6 +21,6 @@
     <div class="col-sm-3 col-md-3">
     {% include 'leaderboard.html' %}
     </div>
-
+</div>
 
 {% endblock %}
