@@ -101,17 +101,28 @@
                     clearInterval(x);
                     document.getElementById(id).innerHTML = "Start Test";
                     var z=String("{% url 'contest_detail' 99999 %}").replace("99999",id);
-                    $(id).attr("href",z );
+                    $(id).attr("href", z );
                 }
             }, 1000);
         }
         var date;
-        {% if contests %}
-            {% for contest in contests %}
+        {% if live_contests %}
+            {% for contest in live_contests %}
+                $("#{{ contest.id }}").text("Start Test");
+                $("#{{ contest.id }}").attr("href",{{ contest.id }});
+            {% endfor %}
+        {% endif %}
+        {% if upcoming_contests %}
+            {% for contest in upcoming_contests %}
                 timer({{ contest.id }},$("#startdate{{ contest.id }}").text());
             {% endfor %}
         {% endif %}
-
+        {% if past_contests %}
+            {% for contest in past_contests %}
+                $("#{{ contest.id }}").text("View Leaderboard");
+                $("#{{ contest.id }}").attr("href",{{ contest.id }});
+            {% endfor %}
+        {% endif %}
 
     </script>
 

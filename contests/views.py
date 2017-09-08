@@ -14,11 +14,11 @@ def contests(request):
     upcoming = []
     past = []
     for contest in contests:
-        if contest.status() == 1:
+        if contest.status(request.user) == 1:
             live.append(contest)
-        elif contest.status() == 0:
+        elif contest.status(request.user) == 0:
             upcoming.append(contest)
-        elif contest.status() == -1:
+        elif contest.status(request.user) == -1:
             past.append(contest)
     if len(live)!=0:
         context['live_contests'] = live
@@ -33,7 +33,7 @@ def contests(request):
 def contest(request,id):
     context={}
     cont = Contest.objects.get(id=id)
-    if cont.status() == 1:
+    if cont.status(request.user) == 1:
         context['valid']=True
         context['contest']=cont
         cont.start_contest()
@@ -46,8 +46,9 @@ def contest(request,id):
         context['questions']=sorted_question
         leaderboard = Leaderboard.objects.get_or_create(contest=cont)[0].get_leaderboard()
         context['leaderboard']=leaderboard
-    elif cont.status() == -1:
-        leaderboard = Leaderboard.objects.get_or_create(contest=cont)[0].get_leaderboard()
+    elif cont.status(request.user) == -1:
+        leaderboard = Leaderboard.objects.get(contest=cont).get_leaderboard()
+        context['leaderboard'] = leaderboard
         return render(request,"leaderboard.html",context)
     else:
         context['status']="Contest has not yet started"
