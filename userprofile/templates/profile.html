@@ -3,6 +3,11 @@
     Profile
 {% endblock %}
 {% block content %}
+    <style type="text/css">
+    .personal{
+        display: none;
+    }
+    </style>
 <div class='col-md-9'>
      <h1>Hello {{ name }}</h1>
     <div class="panel panel-default">
@@ -14,17 +19,19 @@
         <li>{{ question }}</li>
     {% endfor %}
     {% else   %}
-        {% if name is request.user.username %}
         <h4>No questions solved</h4>
-        <a href="{% url 'alltracks' %}">Solve questions</a>
-        {% endif %}
+        <a href="{% url 'alltracks' %}" class="personal">Solve questions</a>
+
+
     {% endif %}
     </div>
 
     </div>
 </div>
-<div class='col-md-3'>
-<h3 class="page-header" align='center'>Account Management</h3>
+
+
+<div class='col-md-3 personal'>
+<h3 class="page-header " align='center'>Account Management</h3>
 <ul class="list-group">
     
         <li class="list-group-item">
@@ -39,4 +46,10 @@
     
 </ul>
 </div>
+
+    {% if personal %}
+    <script type="text/javascript">
+    $(".personal").show()
+    </script>
+{% endif %}
 {% endblock %}

@@ -29,6 +29,7 @@ def profile(requests):
     solved = Record.objects.all().filter(user=user)
     profile = Profile.objects.get_or_create(user=user)[0]
     context['solved'] = solved
+    context['personal'] = True
     context['points'] = profile.points
 
     return render(requests,'profile.html',context)
@@ -41,7 +42,7 @@ def profiles(requests,id):
     profile = Profile.objects.get_or_create(user=user)[0]
     context['solved'] = solved
     context['points'] = profile.points
-
+    context['personal']= context['name'] == requests.user.username
     return render(requests,'profile.html',context)
 
 
