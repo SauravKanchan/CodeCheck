@@ -6,7 +6,8 @@ from django.contrib import messages
 from practice.models import Record
 from .models import Profile
 from django.contrib.auth.models import User
-
+from contests.models import Contest
+from practice.models import Track
 
 def signup(request):
     if request.method == 'POST':
@@ -51,3 +52,25 @@ def logout_view(request):
     logout(request)
     messages.add_message(request, messages.SUCCESS, 'Successfully Logged Out')
     return HttpResponseRedirect('/login/')
+
+def home(request):
+    context={}
+    contests = Contest.objects.all()
+    live = []
+    upcoming = []
+    for contest in contests:
+        if len(live+upcoming)>4:break
+        if contest.status(request.user) == 1:
+            live.append(contest)
+        elif contest.status(request.user) == 0:
+            upcoming.append(contest)
+    if len(live)!=0:
+        context['live_contests'] = live
+    if len(upcoming)!=0:
+        context['upcoming_contests'] = upcoming
+    context['contests'] = contests
+
+    track = Track.objects.all()[:4]
+    context['track'] = track
+
+    return render(request,'home.html',context)

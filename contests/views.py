@@ -5,7 +5,6 @@ from django.conf import settings
 from compiler.compiler import HackerRankAPI
 import json
 from django.shortcuts import render,HttpResponse,render_to_response
-from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import send_mail
 
 

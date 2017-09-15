@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% if request.path == "/practice/" %}
     <a href="{% url 'leaderboard' %}" class="pull-right well">View Leaderboard</a>
+    {% endif %}
     <h2>All tracks</h2>
     <div class="row">
     {% for t in track %}

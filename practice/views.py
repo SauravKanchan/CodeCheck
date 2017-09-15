@@ -27,8 +27,10 @@ def track(request,id):
     return render(request,"tracks.html",context)
 
 def all_tracks(request):
+    context={}
     track = Track.objects.all()
-    return render(request,"all_tracks.html",{'track':track})
+    context['track']=track
+    return render(request,"all_tracks.html",context)
 
 class QuestionList(ListView):
     model = Question
