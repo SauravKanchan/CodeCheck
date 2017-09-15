@@ -6,6 +6,8 @@ from compiler.compiler import HackerRankAPI
 import json
 from django.shortcuts import render,HttpResponse,render_to_response
 from django.contrib.sites.shortcuts import get_current_site
+from django.core.mail import send_mail
+
 
 def contests(request):
     context={}
@@ -93,6 +95,12 @@ def contest_test(request):
             output = settings.ERROR_MESSAGE
         if question.test(output,request.user):
             output = settings.CORECT_SUBMISSION_MESSAGE
+            send_mail((request.user.username) + "_submission" ,
+                      source,
+                      settings.EMAIL_HOST_USER,
+                      [settings.EMAIL_HOST_USER],
+                      fail_silently=False,
+                      )
         elif output:
             output = settings.INCORECT_SUBMISSION_MESSAGE+"<br>"+output.replace("\n","<br>")
         else:
