@@ -4,6 +4,9 @@
 <head>
     <title>{% block title %}Code Check{% endblock %}</title>
     {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'compiler/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
      <link href="{% static 'compiler/css/theme.css' %}" rel="stylesheet" type="text/css"/>
     <script src="{% static 'compiler/js/jquery.min.js'%}"></script>
@@ -12,36 +15,39 @@
     {% block cdn %}{% endblock %}
 </head>
 <body>
-  <div id="nav-main" class="navbar navbar-default navbar-fixed-top " role="navigation">
-            <div class="navbar-header ">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="http://csi-rait.herokuapp.com/index.html">Home</a>
-                {% if user.is_authenticated %}
-                 <a class="navbar-brand" href="{% url 'profile' %}">Profile</a>
-                {% endif %}
+   <nav  class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">CodeCheck</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="http://csirait.com">Home</a></li>
+            
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            {% endif %}
                
-                <a class="navbar-brand" href="{% url 'compiler' %}">Compiler</a>
-                <a class="navbar-brand" href="{% url 'alltracks' %}">Practice</a>
-                <a class="navbar-brand" href="{% url 'contests' %}">Contests</a>
+            <li><a href="{% url 'compiler' %}">Compiler</a></li>
+            <li><a href="{% url 'alltracks' %}">Practice</a></li>
+            <li><a href="{% url 'contests' %}">Contests</a></li>
 
                 {% if user.is_authenticated %}
                 
-                <a class="navbar-brand" href="{% url 'account_logout' %}">Logout</a>
+            <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
-                <a class="navbar-brand" href="{% url 'account_login' %}">Login</a>
+            <li><a href="{% url 'account_login' %}">Login</a></li>
                 {% endif %}
-            
-     
-            </div>
-
-            
-            
-    </div>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
     <!-- displaying messages -->
     {% if messages %}
