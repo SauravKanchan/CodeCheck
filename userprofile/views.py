@@ -70,7 +70,7 @@ def home(request):
         context['upcoming_contests'] = upcoming
     context['contests'] = contests
 
-    track = Track.objects.all()[:4]
+    track = Track.objects.all()[:3]
     context['track'] = track
 
     return render(request,'home.html',context)
