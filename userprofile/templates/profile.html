@@ -8,16 +8,24 @@
         display: none;
     }
     </style>
+    <a href="{% url 'leaderboard' %}" class="pull-right well">View Leaderboard</a>
 <div class='col-md-9'>
+    {% if personal %}
      <h1>Hello {{ name }}</h1>
+    {% else %} 
+    <h1>You are viewing {{name}}'s profile</h1>
+    {% endif %}
+    
     <div class="panel panel-default">
     <div class="panel-body">
-    Total points:- {{ points }}<br>
+    <p>Total points:- {{ points }}</p>
     {% if solved %}
-    Solved questions:-<br>
+    <p>Solved questions:-</p>
+    <ul class="list-group">
     {% for question in solved %}
-        <li>{{ question }}</li>
+        <li class="list-group-item">{{ question }}</li>
     {% endfor %}
+    </ul>
     {% else   %}
         <h4>No questions solved</h4>
         <a href="{% url 'alltracks' %}" class="personal">Solve questions</a>
