@@ -36,7 +36,8 @@
           </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+
+                <li><a href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"></span>  {{ user.username}} :Profile</a></li>
                 <li><a href="{% url 'account_logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 {% else %}
               <li><a href="{% url 'account_signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
