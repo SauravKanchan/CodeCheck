@@ -24,26 +24,27 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://csirait.com">CSI RAIT</a>
-          <a class="navbar-brand" href="/">Code Check</a>
+          <a class="navbar-brand" href="/">CodeCheck</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+            <li ><a href="http://csirait.com">CSI RAIT</a></li>
             
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            {% endif %}
+               
             <li><a href="{% url 'compiler' %}">Compiler</a></li>
             <li><a href="{% url 'alltracks' %}">Practice</a></li>
             <li><a href="{% url 'contests' %}">Contests</a></li>
-          </ul>
-            <ul class="nav navbar-nav navbar-right">
-                {% if user.is_authenticated %}
 
-                <li><a href="{% url 'profile' %}"><span class="glyphicon glyphicon-user"></span>  {{ user.username}} :Profile</a></li>
-                <li><a href="{% url 'account_logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                {% if user.is_authenticated %}
+                
+            <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
-              <li><a href="{% url 'account_signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-              <li><a href="{% url 'account_login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-              {% endif %}
-            </ul>
+            <li><a href="{% url 'account_login' %}">Login</a></li>
+                {% endif %}
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
