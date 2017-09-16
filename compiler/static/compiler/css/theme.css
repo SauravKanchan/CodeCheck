@@ -100,9 +100,9 @@ body {
   width: auto;
 }
 .wmd-panel{
-	width: 100%;
-	margin-left: 0;
-	margin-right: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /*for overriding bootstrap list numbering*/
@@ -132,7 +132,7 @@ ol li.list-group-item {
     max-height: 30px !important;
 }
 .table-fit {
-     width: 1px;
+     width: 5px;
  }
 
  /*#nav-main a{
@@ -142,3 +142,7 @@ ol li.list-group-item {
  #nav-main button {
     background-color: black;
 }*/
+
+table tr:hover td{
+    background-color: white;
+}

@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="row">
-<h3>Leaderboard</h3>
-    {{ total_points }}
-    {% if total_points %}
-        {{ total_points }}
-    {% endif %}
 
-  <table class="table table-hover table-fit">
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+  <h3>Leaderboard</h3>
+ 
+  <table id="datatable" class="table table-hover table-fit">
     <thead>
       <tr>
         <th>User</th>
@@ -20,10 +18,62 @@
       <tr>
           <td><a href="{% url 'general_profile' profile.user.id %}">{{profile}}</a></td>
         <td>{{points}}</td>
-
+        
       </tr>
     {% endfor %}
     </tbody>
   </table>
+  <div id="container"></div>
+
+  </div>
 </div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript">
+ Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Distribution of points'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Range',
+        colorByPoint: true,
+        data: [{
+            name: '0-25',
+            y: 56.33
+        }, {
+            name: '26-50',
+            y: 24.03,
+            
+        }, {
+            name: '51-75',
+            y: 10.38
+        }, {
+            name: '76-100',
+            y: 4.77
+        }]
+    }]
+});
+</script>
+
 {% endblock %}
