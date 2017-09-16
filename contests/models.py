@@ -181,8 +181,10 @@ class Leaderboard(models.Model):
 
     def set_points(self):
         questions = ContestQuestion.objects.filter(contest = self.contest)
+        p=0
         for question in questions:
-            self.total_points += question.points
+            p += question.points
+        self.total_points += p
         self.save()
 
     def __str__(self):
