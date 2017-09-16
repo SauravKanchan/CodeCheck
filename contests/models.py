@@ -46,7 +46,10 @@ class Contest(models.Model):
         # Addig all the contest's questions to practice questions
         # and then deleting this data
         questions = ContestQuestion.objects.all().filter(contest=self)
-        Leaderboard.objects.get(contest=self).set_leaderboard()
+        leaderboard = Leaderboard.objects.get(contest=self)
+        leaderboard.set_leaderboard()
+        leaderboard.set_points()
+
         ques = []
         for question in questions:
             q = Question.objects.create(
@@ -134,8 +137,11 @@ class ContestRecord(models.Model):
 class Leaderboard(models.Model):
     contest = models.ForeignKey(Contest)
     leaderboard = models.CharField(max_length=1000,default="[]")
+    total_points = models.PositiveIntegerField(default = 0)
 
     def get_leaderboard(self):
+        if self.total_points == 0:
+            self.set_points()
         if self.leaderboard == "[]":
             try:
                 records = ContestRecord.objects.all().filter(contest = self.contest)
@@ -172,6 +178,12 @@ class Leaderboard(models.Model):
             self.leaderboard = str(leaderboard)
             self.save()
         return self.leaderboard
+
+    def set_points(self):
+        questions = ContestQuestion.objects.filter(contest = self.contest)
+        for question in questions:
+            self.total_points += question.points
+        self.save()
 
     def __str__(self):
         return str(self.contest)+"-- Leaderboard"

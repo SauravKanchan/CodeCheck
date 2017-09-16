@@ -45,12 +45,15 @@ def contest(request,id):
         sorted_question = sorted(q.items(), key=operator.itemgetter(1))
         sorted_question.reverse()
         context['questions']=sorted_question
-        leaderboard = Leaderboard.objects.get_or_create(contest=cont)[0].get_leaderboard()
+        leaderboardObject = Leaderboard.objects.get_or_create(contest=cont)[0]
+        leaderboard = leaderboardObject.get_leaderboard()
         context['leaderboard']=leaderboard
+        context['total_points'] = leaderboardObject.total_points
     elif cont.status(request.user) == -1:
-        leaderboard = Leaderboard.objects.get(contest=cont).get_leaderboard()
-        for i in range(100):print(leaderboard)
-        context['leaderboard'] = leaderboard
+        leaderboardObject = Leaderboard.objects.get_or_create(contest=cont)[0]
+        leaderboard = leaderboardObject.get_leaderboard()
+        context['leaderboard']=leaderboard
+        context['total_points'] = leaderboardObject.total_points
         return render(request,"leaderboard.html",context)
     else:
         context['status']="Contest has not yet started"

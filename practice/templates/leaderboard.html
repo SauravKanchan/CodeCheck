@@ -2,6 +2,10 @@
 {% block content %}
     <div class="row">
 <h3>Leaderboard</h3>
+    {{ total_points }}
+    {% if total_points %}
+        {{ total_points }}
+    {% endif %}
 
   <table class="table table-hover table-fit">
     <thead>
