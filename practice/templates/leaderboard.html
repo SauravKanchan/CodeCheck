@@ -34,6 +34,11 @@
   var percent50=0;
   var percent75=0;
   var percent100=0;
+
+  var num1=(totalpoints*0.25).toString();
+  var num2=(totalpoints*0.50).toString();
+  var num3=(totalpoints*0.75).toString();
+  
   
   $( document ).ready(function() {
     // converting table to json for easy use
@@ -78,20 +83,20 @@
         }
     },
     series: [{
-        name: 'Range',
+        name: 'Users',
         colorByPoint: true,
         data: [{
-            name: '0-25%',
+            name: '0-'+num1,
             y: percent25
         }, {
-            name: '26-50%',
+            name: num1+'-'+num2,
             y: percent50
             
         }, {
-            name: '51-75%',
+            name:num2+'-'+num3,
             y: percent75
         }, {
-            name: '76-100%',
+            name:num3+'-'+totalpoints,
             y: percent100
         }]
     }]
