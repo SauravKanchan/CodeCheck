@@ -109,7 +109,7 @@
         {% if live_contests %}
             {% for contest in live_contests %}
                 $("#{{ contest.id }}").text("Start Test");
-                $("#{{ contest.id }}").attr("href",{{ contest.id }});
+                $("#{{ contest.id }}").attr("href","{% url 'contest_detail' contest.id %}");
             {% endfor %}
         {% endif %}
         {% if upcoming_contests %}
@@ -120,7 +120,7 @@
         {% if past_contests %}
             {% for contest in past_contests %}
                 $("#{{ contest.id }}").text("View Leaderboard");
-                $("#{{ contest.id }}").attr("href",{{ contest.id }});
+                $("#{{ contest.id }}").attr("href","{% url 'contest_detail' contest.id %}");
             {% endfor %}
         {% endif %}
 

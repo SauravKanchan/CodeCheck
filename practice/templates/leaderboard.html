@@ -22,14 +22,15 @@
     {% endfor %}
     </tbody>
   </table>
- 
+ {% if total_points %}
   <div id="container"></div>
+    {% endif %}
 </div>
-
+{% if total_points %}
 <script src="{% static 'compiler/js/jquery.tabletojson.js'%}" type="text/javascript"></script>
 <script src="{% static 'compiler/js/highcharts.js'%}"></script>
 <script type="text/javascript">
-  var totalpoints=2000;
+  var totalpoints={{ total_points }};
   var percent25=0;
   var percent50=0;
   var percent75=0;
@@ -103,5 +104,6 @@
   });
   
 });
+  {% endif %}
 </script>
 {% endblock %}
