@@ -48,7 +48,6 @@ def contest(request,id):
         leaderboardObject = Leaderboard.objects.get_or_create(contest=cont)[0]
         leaderboard = leaderboardObject.get_leaderboard()
         context['leaderboard']=leaderboard
-        context['total_points'] = leaderboardObject.total_points
     elif cont.status(request.user) == -1:
         leaderboardObject = Leaderboard.objects.get_or_create(contest=cont)[0]
         leaderboard = leaderboardObject.get_leaderboard()
@@ -110,3 +109,13 @@ def contest_test(request):
         return HttpResponse(json.dumps({'output': output}), content_type="application/json")
     else:
         return render_to_response('code_editor.html', locals())
+
+def leaderboard(request,id):
+    for i in range(100):print("inside leaderboard")
+    context = {}
+    cont = Contest.objects.get(id=id)
+    leaderboardObject = Leaderboard.objects.get_or_create(contest=cont)[0]
+    leaderboard = leaderboardObject.get_leaderboard()
+    context['leaderboard'] = leaderboard
+    context['total_points'] = leaderboardObject.total_points
+    return render(request,"leaderboard.html",context)

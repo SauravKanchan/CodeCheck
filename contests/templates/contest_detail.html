@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     {% if valid %}
+
     <div class="col-sm-3 col-md-9">
     <div class="panel panel-default">
       <div class="panel-body">Contest: {{ contest.title }}</div>
@@ -22,6 +23,8 @@
 {% include 'timer.html' %}
 
     <div class="col-sm-3 col-md-3">
+            <a href="{% url 'contest_leaderboard' contest.id %}" class="pull-right">View Leaderboard</a>
+
     {% include 'leaderboard.html' %}
     </div>
         {% else %}
