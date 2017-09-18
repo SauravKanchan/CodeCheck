@@ -142,3 +142,7 @@ ol li.list-group-item {
  #nav-main button {
     background-color: black;
 }*/
+
+table tr:hover td{
+    background-color: white;
+ }
