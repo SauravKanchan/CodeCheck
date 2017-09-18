@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
-    <div class="row">
+    <div class="row col-sm-4 col-sm-offset-4">
 <h3>Leaderboard</h3>
 
-  <table class="table table-hover table-fit">
+  <table id="mytable" class="table table-hover table-fit">
     <thead>
       <tr>
         <th>User</th>
@@ -21,5 +22,81 @@
     {% endfor %}
     </tbody>
   </table>
+ 
+  <div id="container"></div>
 </div>
+
+<script src="{% static 'compiler/js/jquery.tabletojson.js'%}" type="text/javascript"></script>
+<script src="{% static 'compiler/js/highcharts.js'%}"></script>
+<script type="text/javascript">
+  var totalpoints=2000;
+  var percent25=0;
+  var percent50=0;
+  var percent75=0;
+  var percent100=0;
+  
+  $( document ).ready(function() {
+    // converting table to json for easy use
+    var table = $('#mytable').tableToJSON();
+   // alert(JSON.stringify(table));  
+    $.each(table, function(key, value) {
+        if(value.Points >= (totalpoints*0.75))
+          percent100++;
+        else if(value.Points >= (totalpoints*0.50))
+          percent75++;
+        else if(value.Points >= (totalpoints*0.25))
+          percent50++;
+        else
+          percent25++;
+
+    });
+    
+  Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Points Distribution'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Range',
+        colorByPoint: true,
+        data: [{
+            name: '0-25%',
+            y: percent25
+        }, {
+            name: '26-50%',
+            y: percent50
+            
+        }, {
+            name: '51-75%',
+            y: percent75
+        }, {
+            name: '76-100%',
+            y: percent100
+        }]
+    }]
+  });
+  
+});
+</script>
 {% endblock %}
