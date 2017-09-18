@@ -51,7 +51,7 @@ def contest(request,id):
     elif cont.status(request.user) == -1:
         leaderboardObject = Leaderboard.objects.get_or_create(contest=cont)[0]
         leaderboard = leaderboardObject.get_leaderboard()
-        context['leaderboard']=leaderboard[:10]
+        context['leaderboard']=leaderboard[:5]
         context['total_points'] = leaderboardObject.total_points
         return render(request,"leaderboard.html",context)
     else:
