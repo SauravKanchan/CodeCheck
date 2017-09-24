@@ -1,0 +1,126 @@
+    {% if live_contest or upcoming_contests or past_contests %}
+
+        {% if live_contests %}
+<div class="col-md-12">
+            <h3>Live Contests</h3>
+        {% for contest in live_contests %}
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="">
+                    <div class="caption">
+                        <h3>{{ contest.title }}</h3>
+                        <h4 id="startdate{{ contest.id }}" style="display: none">{{ contest.get_start_date }}</h4>
+                        <h5>{{ contest.description }}</h5>
+                        <h5>{{ contest.start_date }}</h5>
+                        <p><a class="btn btn-primary" id="{{ contest.id }}" href="{% url 'contest_detail' contest.id %}"> </a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+
+
+        {% endif %}
+        {% if upcoming_contests %}
+  <div class="col-md-12">
+                        <h3>Upcoming Contests</h3>
+        {% for contest in upcoming_contests %}
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="">
+                    <div class="caption">
+                        <h3>{{ contest.title }}</h3>
+                        <h4 id="startdate{{ contest.id }}" style="display: none">{{ contest.get_start_date }}</h4>
+                        <h5>{{ contest.description }}</h5>
+                        <h5>{{ contest.start_date }}</h5>
+                        <p><a class="btn btn-primary" id="{{ contest.id }}" href="#"> </a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+         </div>
+
+        {% endif %}
+
+        {% if past_contests %}
+<div class="col-md-12">
+            <h3>Past Contests</h3>
+        {% for contest in past_contests %}
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="">
+                    <div class="caption">
+                        <h3>{{ contest.title }}</h3>
+                        <h4 id="startdate{{ contest.id }}" style="display: none">{{ contest.get_start_date }}</h4>
+                        <h5>{{ contest.description }}</h5>
+                        <h5>{{ contest.start_date }}</h5>
+                        <p><a class="btn btn-primary" id="{{ contest.id }}" href="#"> </a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+</div>
+        {% endif %}
+
+    {% else %}
+        <h2>No contests available</h2>
+    {% endif %}
+
+    <script>
+        // Set the date we're counting down to
+        function timer(id,date) {
+
+            var countDownDate = new Date(date).getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function () {
+
+                // Get todays date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now an the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="demo"
+                document.getElementById(id).innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById(id).innerHTML = "Start Test";
+                    var z=String("{% url 'contest_detail' 99999 %}").replace("99999",id);
+                    $(id).attr("href", z );
+                }
+            }, 1000);
+        }
+        var date;
+        {% if live_contests %}
+            {% for contest in live_contests %}
+                $("#{{ contest.id }}").text("Start Test");
+                $("#{{ contest.id }}").attr("href","{% url 'contest_detail' contest.id %}");
+            {% endfor %}
+        {% endif %}
+        {% if upcoming_contests %}
+            {% for contest in upcoming_contests %}
+                timer({{ contest.id }},$("#startdate{{ contest.id }}").text());
+            {% endfor %}
+        {% endif %}
+        {% if past_contests %}
+            {% for contest in past_contests %}
+                $("#{{ contest.id }}").text("View Leaderboard");
+                $("#{{ contest.id }}").attr("href","{% url 'contest_detail' contest.id %}");
+            {% endfor %}
+        {% endif %}
+
+    </script>
+

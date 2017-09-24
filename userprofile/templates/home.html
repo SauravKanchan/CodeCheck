@@ -2,10 +2,12 @@
 
 
 {% block content %}
-
-    {% include 'contests.html' %}
+    {% if live_contests or upcoming_contests %}
+    {% include 'contests_content.html' %}
     <a href="{% url 'contests' %}">Know more</a>
+    {% endif %}
+    {% if track %}
     {% include 'all_tracks.html' %}
     <a href="{% url 'alltracks' %}">Know more</a>
-
+    {% endif %}
 {% endblock %}
