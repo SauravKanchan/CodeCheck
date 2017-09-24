@@ -72,6 +72,5 @@ def home(request):
 
     track = Track.objects.all()[:3]
     context['track'] = track
-    for i in range(100):print(live,upcoming)
 
     return render(request,'home.html',context)
