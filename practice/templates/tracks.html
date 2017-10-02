@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Questions</h2>
-    <ul>
+    <div><h2 style="text-align: center">Questions</h2></div>
+    <hr>
+    <ol>
         {% for question in questions %}
-            <li><a href="{% url 'question-detail' question.id %}">{{ question.title }}
-    </a></li>
+            <div class="well" style="background-color: white"><li style="margin-left: 20px;padding-left: 10px"><a href="{% url 'question-detail' question.id %}">{{ question.title }}
+            </a></li></div>
         {% endfor %}
-    </ul>
+    </ol>
+
 {% endblock %}
