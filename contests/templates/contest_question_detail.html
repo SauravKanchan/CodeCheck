@@ -54,6 +54,7 @@
 
             <div id="result">
                 <div>
+                    <div class="alert alert-info" id ="message" style="display: none"></div>
                     {% include 'code_editor_content.html' %}
 
                     <!-- end of row -->
@@ -68,7 +69,9 @@
             <script>
 
                 $("#question-submit").on("click", function () {
-                    $("#output").html("Submitting..");
+                    $("#output").html("Submitting...");
+                    $("#message").text("Submitting...").css("display","block");
+
                     // disable submit btn
                     $("#btn").prop('disabled', true);
                     $.ajax(
@@ -91,13 +94,19 @@
                                 var str = (output.output).toString();
                                 str = decodeURIComponent(escape(str));
                                 $("#output").html(str);
+                                $("#message").css("display","block");
+                                if (output.output == "Correct"){
+                                $("#message").text("All Correct").css("background-color","lightgreen");
+                                }else{
+                                $("#message").text("Wrong Answer").css("background-color","#ff7644");
+                                }
                             },
 
                             error: function (err) {
                                 // enables submit btn
                                 $("#btn").prop('disabled', false);
                                 $("#output").html("Something went wrong please try again");
-                            },
+                },
                         })
 
                 })

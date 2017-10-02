@@ -52,7 +52,7 @@
 
             <div id="result">
                 <div>
-                    <div class="alert alert-info" id ="message" style="display: none"></div>
+                    <div class="alert alert-info" id ="message" style="display: none;"></div>
                     {% include 'code_editor_content.html' %}
 
                     <!-- end of row -->
@@ -71,7 +71,9 @@
                     var post_url = "{% url 'test' %}";
                 {% endif %}
                 $("#question-submit").on("click", function () {
-                    $("#output").html("Submitting..");
+                    $("#output").html("Submitting...");
+                    $("#message").text("Submitting...").css("display","block");
+
                     // disable submit btn
                     $("#btn").prop('disabled', true);
                     $.ajax(
