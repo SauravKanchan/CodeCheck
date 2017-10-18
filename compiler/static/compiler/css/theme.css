@@ -113,6 +113,7 @@ ol li.list-group-item {
 }
 
 
+
 #testcases {
     display: none;
 }
@@ -149,7 +150,14 @@ table tr:hover td{
  }
 
 
-
+/* Overriding Boostrap */
+.alert{
+    text-align: center;
+}
+.alert.alert-error{
+    background-color: #ef5350;
+    color: #F2F2F2;
+}
 /* CSS For Login Page */
 .login-signup-container{
     text-align:center;
@@ -158,12 +166,12 @@ table tr:hover td{
 }
 
 .login-signup-container h1{
-    font-family: 'Quicksand', sans-serif;
     font-size: 3.5em;
     letter-spacing: 1px;
     padding-bottom: 50px;
 }
 .login-signup-container *{
+    font-family: 'Quicksand', sans-serif;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -ms-transition-duration: 0.3s;
@@ -173,6 +181,18 @@ table tr:hover td{
 
 .login-signup-container .form-group{
     margin: 30px;
+}
+
+.login-signup-container .alert-block{
+    margin: 30px;
+}
+.login-signup-container .alert-block ul{
+    margin: 0px;
+    -moz-padding-start: 0;
+    -webkit-padding-start: 0;
+}
+.login-signup-container .alert-block li{
+    list-style: none;
 }
 .login-signup-container input.form-control{
     font-size: 1.2em;
@@ -225,4 +245,98 @@ table tr:hover td{
 }
 .login-signup-container .links .signup-link a{
     margin-left: 4px;
+}
+
+/* CSS For Listing and Adding Email Addresses */
+
+.email-addresses-container *{
+    font-family: 'Quicksand', sans-serif;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.email-addresses-container h1{
+    margin-bottom: 1em;
+}
+
+.email-addresses-container .email-addresses-table{
+    margin: 15px;
+    font-size: 1.1em;
+}
+.email-addresses-container .email-addresses-table thead{
+    margin-bottom:30px;
+}
+.email-addresses-container .email-addresses-table thead th{
+    font-weight:bolder;
+    font-size: 1.3em;
+    text-align: center;
+}
+.email-addresses-container .email-addresses-table tbody:before {
+    content: "-";
+    display: block;
+    line-height: 1em;
+    color: transparent;
+}
+.email-addresses-container .email-addresses-table tbody tr:hover td{
+    background-color: #EEEEEE;
+}
+.email-addresses-container .email-addresses-table tbody td{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.email-addresses-container .associated-email-address .email-radio-input{
+    display: none;
+}
+.email-addresses-container button{
+    background-color: transparent;
+    margin: auto 5px;
+}
+
+.email-addresses-container .email-address-action-buttons button.make-primary, .email-addresses-container .add-email-button{
+    border-color: #66BB6A;
+    color: #66BB6A;
+}
+.email-addresses-container .email-address-action-buttons button.make-primary:hover, .email-addresses-container .add-email-button:hover{
+    background-color: #66BB6A;
+    color: #F5F5F5;
+}
+
+.email-addresses-container .email-address-action-buttons button.send-verification{
+    border-color: #26C6DA;
+    color: #26C6DA;
+}
+.email-addresses-container .email-address-action-buttons button.send-verification:hover{
+    background-color: #26C6DA;
+    color: #F5F5F5;
+}
+
+.email-addresses-container .email-address-action-buttons button.remove-email{
+    border-color: #ef5350;
+    color: #ef5350;
+}
+.email-addresses-container .email-address-action-buttons button.remove-email:hover{
+    background-color: #ef5350;
+    color: #F5F5F5;
+}
+
+.email-addresses-container form.add_email #div_id_email{
+    width: 100%;
+}
+.email-addresses-container form.add_email #div_id_email > label{
+    display:none;
+}
+.email-addresses-container form.add_email #div_id_email input{
+    font-size: 1.3em;
+    height: auto;
+}
+.email-addresses-container form.add_email .add-email-button{
+    width: 100%;
+    font-size: 1.3em;
+    margin: 5px auto;
 }
