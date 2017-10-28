@@ -149,7 +149,26 @@ table tr:hover td{
     background-color: white;
  }
 
+/* Components that can be reused */
 
+*{
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.btn-primary-outline{
+    background: transparent;
+    color:#66BB6A;
+    border: 1px solid #66BB6A;
+}
+.btn-primary-outline:hover,.solve-question-button,.solve-question-button:hover{
+    background: #66BB6A;
+    color: #F5F5F5;
+    border: 1px solid #66BB6A;
+}
 /* Overriding Boostrap */
 .alert{
     text-align: center;
@@ -172,11 +191,6 @@ table tr:hover td{
 }
 .login-signup-container *{
     font-family: 'Quicksand', sans-serif;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -ms-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
 }
 
 .login-signup-container .form-group{
@@ -339,4 +353,45 @@ table tr:hover td{
     width: 100%;
     font-size: 1.3em;
     margin: 5px auto;
+}
+
+/* CSS For List of Questions */
+
+.question-list{
+    margin-top: 5em;
+    list-style: none;
+}
+.question{
+    padding: 25px;
+    margin-bottom: 50px;
+    background: transparent !important;
+    font-size: 1.3em;
+    font-weight: bolder;
+    border: 1px solid #26C6DA;
+}
+.question:hover{
+    background:#40C4FF !important;
+    border-color: #40C4FF;
+
+}
+.question:hover .question-name span{
+    color: #F5F5F5;
+}
+.question .question-name span{
+    color: #26C6DA;
+}
+
+.question-row{
+    display: table;
+}
+.question-row > div{
+    display: table-cell;
+    vertical-align: middle;
+}
+.question-row > .question-name{
+    width: 100%;
+}
+.solve-question-button:hover{
+    background: #00C853;
+    border-color: #00C853;
 }
