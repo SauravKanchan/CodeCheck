@@ -426,3 +426,35 @@ table tr:hover td{
     margin-top:2em;
     width:100%;
 }
+
+/* CSS For Leaderboard */
+.leaderboard-container{
+    margin-top: 4em;
+}
+.leaderboard-container h1{
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+
+.leaderboard-table tr:hover td{
+    background: #E8F5E9;
+}
+.leaderboard-table td,.leaderboard-table th{
+    padding: 1em !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+.leaderboard-table th{
+    font-size: 1.4em;
+}
+.leaderboard-table td{
+    font-size: 1.2em;
+}
+.leaderboard-table td a{
+    text-decoration: none !important;
+}
+.leaderboard-table td a:hover{
+    color: #26C6DA;
+}
