@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
     {% if live_contests or upcoming_contests %}
-    {% include 'contests_content.html' %}
-    <a href="{% url 'contests' %}">Know more</a>
+        {% include 'contests_content.html' %}
+        <div class="container"><a href="{% url 'contests' %}">Know more</a></div>
     {% endif %}
     {% if track %}
-    {% include 'all_tracks.html' %}
-    <a href="{% url 'alltracks' %}">Know more</a>
+        {% include 'all_tracks.html' %}
+        <div class="container"><a href="{% url 'alltracks' %}">Know more</a></div>
     {% endif %}
 {% endblock %}

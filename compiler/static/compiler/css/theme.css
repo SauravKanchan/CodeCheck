@@ -1,9 +1,13 @@
 body {
-    font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Quicksand', sans-serif !important;
   padding-top: 70px;
   padding-bottom: 30px;
   /*background-color:#E5FFF2 ;*/
   background-color:#ecf0f1;
+}
+
+body *{
+    font-family: 'Quicksand', sans-serif !important;
 }
 
 #spacing{
@@ -356,31 +360,10 @@ table tr:hover td{
 }
 
 /* CSS For List of Questions */
-
 .question-list{
     margin-top: 5em;
     list-style: none;
 }
-.question{
-    padding: 25px;
-    margin-bottom: 50px;
-    background: transparent !important;
-    font-size: 1.3em;
-    font-weight: bolder;
-    border: 1px solid #26C6DA;
-}
-.question:hover{
-    background:#40C4FF !important;
-    border-color: #40C4FF;
-
-}
-.question:hover .question-name span{
-    color: #F5F5F5;
-}
-.question .question-name span{
-    color: #26C6DA;
-}
-
 .question-row{
     display: table;
 }
@@ -391,7 +374,55 @@ table tr:hover td{
 .question-row > .question-name{
     width: 100%;
 }
+
+/* CSS Common for List of Questions and Practice > List of Tracks */
+.question,.track,.contest{
+    padding: 25px;
+    margin-bottom: 50px;
+    background: transparent !important;
+    font-size: 1.3em;
+    font-weight: bolder;
+    border: 1px solid #26C6DA;
+}
+.question:hover,.track:hover,.contest:hover{
+    background:#40C4FF !important;
+    border-color: #40C4FF;
+
+}
+.question:hover .question-name span,.track:hover h3,.contest:hover h3{
+    color: #F5F5F5;
+}
+.question .question-name span,.track h3,.contest h3{
+    color: #26C6DA;
+}
+
 .solve-question-button:hover{
     background: #00C853;
     border-color: #00C853;
+}
+
+/* CSS For Practice > List of Tracks and Contests > List of Contests */
+.tracks-container .row .col-md-4,.contests-container .row .col-md-4{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.tracks-container,.contests-container{
+    margin-top: 4em;
+}
+.tracks-container .primary-heading,.contests-container .primary-heading{
+    margin-bottom: 2em;
+}
+.view-leaderboard-link{
+    margin-bottom: 0;
+    text-decoration: none !important;
+}
+.view-leaderboard-link:hover{
+    letter-spacing: 2px;
+}
+.track h3 ,.contest h3{
+    margin-bottom: 2em;
+}
+.track p a,.contest p a{
+    margin-top:2em;
+    width:100%;
 }
