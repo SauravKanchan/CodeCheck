@@ -1,22 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% if request.path == "/practice/" %}
-    <a href="{% url 'leaderboard' %}" class="pull-right well">View Leaderboard</a>
-    {% endif %}
-    <h2>All tracks</h2>
-    <div class="row">
-    {% for t in track %}
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="" >
-      <div class="caption">
-        <h3>{{ t.title }}</h3>
-        <p><a href="{% url 'track' t.id %}" class="btn btn-primary" role="button">Solve</a></p>
-      </div>
+    <div class="container tracks-container">
+        {% if request.path == "/practice/" %}
+        <a href="{% url 'leaderboard' %}" class="pull-right well view-leaderboard-link">View Leaderboard</a>
+        {% endif %}
+        <h2 class="primary-heading">All tracks</h2>
+        <div class="row">
+            {% for t in track %}
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail track">
+                  <img src="" >
+                  <div class="caption">
+                    <h3>{{ t.title }}</h3>
+                    <p><a href="{% url 'track' t.id %}" class="btn btn-primary solve-question-button" role="button">Solve</a></p>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
     </div>
-  </div>
-    {% endfor %}
-</div>
-
 {% endblock %}
