@@ -1,13 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div><h2 style="text-align: center">Questions</h2></div>
-    <hr>
-    <ol>
-        {% for question in questions %}
-            <div class="well" style="background-color: white"><li style="margin-left: 20px;padding-left: 10px"><a href="{% url 'question-detail' question.id %}">{{ question.title }}
-            </a></li></div>
-        {% endfor %}
-    </ol>
+    <div class="container questions-list-container">
+        <div><h2 style="margin-top: 3em;text-align: center">Questions</h2></div>
+        <hr>
+        <ol class="question-list">
+            {% for question in questions %}
+                <div class="well question" style="background-color: white">
+                    <li>
+                        <div class="question-row">
+                            <div class="question-name">
+                                <span>
+                                    {{ question.title }}
+                                </span>
+                            </div>
+                            <div class="question-buttons">
+                                <a href="{% url 'question-detail' question.id %}" class="btn btn-primary solve-question-button">
+                                    Solve Question
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            {% endfor %}
+        </ol>
+    </div>
 
 {% endblock %}

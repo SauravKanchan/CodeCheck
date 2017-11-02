@@ -1,27 +1,24 @@
 {% load staticfiles %}
-<div class="row col-sm-4 col-sm-offset-4">
-<h3>Leaderboard</h3>
-
-  <table id="mytable" class="table table-hover table-fit">
-    <thead>
-      <tr>
-        <th>User</th>
-        <th>Points</th>
-
-      </tr>
-    </thead>
-    <tbody>
-    {% for profile,points in leaderboard %}
-      <tr>
-          <td><a href="{% url 'general_profile' profile.user.id %}">{{profile}}</a></td>
-        <td>{{points}}</td>
-
-      </tr>
-    {% endfor %}
-    </tbody>
-  </table>
- {% if total_points %}
-  <div id="container"></div>
+<div class="container leaderboard-container">
+    <h1>Leaderboard</h1>
+      <table id="mytable" class="table table-hover leaderboard-table">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for profile,points in leaderboard %}
+              <tr>
+                <td><a href="{% url 'general_profile' profile.user.id %}">{{profile}}</a></td>
+                <td>{{points}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if total_points %}
+        <div id="container"></div>
     {% endif %}
 </div>
 {% if total_points %}
