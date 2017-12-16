@@ -10,11 +10,14 @@ https://code-check-csi.herokuapp.com/
 - Supports 54 languages
 - Contests can be hosted
 - Tracks can be added
+- Direct compiler is provided to run any code
 - Keeps tracks of solved questions of user
 - better user stats with leaderboard and charts
 - User friendly and fully responsive
 
 ### Why does it exists
+
+- work pending
 
 
 ### Packages/Platforms used
@@ -27,7 +30,17 @@ https://code-check-csi.herokuapp.com/
 
 ### How to install/setup
 
+- work pending
 
 ### TODO  you can view the list of [here](./todo.md).
 
 ### License  [MIT](./LICENSE)
+
+<img src="images/compiler.PNG" width="850">
+<img src="images/contests.PNG" width="850">
+<img src="images/practice.PNG" width="850">
+<img src="images/questions.PNG" width="850">
+<img src="images/user main.PNG" width="850">
+
+<div><img src="images/login.png" width="300">
+<img src="images/reset.png" width="275"></div>
