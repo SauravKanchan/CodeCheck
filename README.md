@@ -23,7 +23,7 @@ https://code-check-csi.herokuapp.com/
 - [django-allauth](https://github.com/pennersr/django-allauth)
 - [django-crispy-forms](http://django-crispy-forms.readthedocs.io/en/latest/)
 - [Heroku](https://www.heroku.com/)
-
+- [Ace Editor](https://ace.c9.io/)
 
 ### How to install/setup
 
