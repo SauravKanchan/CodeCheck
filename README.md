@@ -1,20 +1,18 @@
-## Zalando's README Template
+## CodeCheck
 
-Clear documentation is critical to the success of your project. This checklist is meant to help you cover all your bases. Not every section/subsection will be relevant to your project; pick and choose what is. Inspired by READMEs of very successful projects like etcd.
+CodeCheck is a Django based online judge made using the Hackerrank API.
 
-Please copy-paste this into a new document and save as you build your READMEs. For alternative formats, you might create a [Structured README](https://github.com/shaloo/structuredreadme), which offers a thorough breakdown of optional README ingredients for you to consider. You might also take a look at [this similar checklist](https://github.com/cfpb/open-source-project-template); or check out [art-of-readme](https://github.com/noffle/art-of-readme).
+https://code-check-csi.herokuapp.com/
 
-### Project Name/Intro
 
-- Describe very briefly but clearly what the project does.
-- State if it is out-of-the-box user-friendly, so it’s clear to the user.
-- List its most useful/innovative/noteworthy features.
-- State its goals/what problem(s) it solves.
-- Note and briefly describe any key concepts (technical, philosophical, or both) important to the user’s understanding.
-- Link to any supplementary blog posts or project main pages.
-- Note its development status.
-- Include badges.
-- If possible, include screenshots and demo videos.
+### Features
+
+- Supports 54 languages
+- Contests can be hosted
+- Tracks can be added
+- Keeps tracks of solved questions of user
+- better user stats with leaderboard and charts
+- User friendly and fully responsive
 
 ### Core Technical Concepts/Inspiration
 
@@ -31,17 +29,8 @@ Include any essential instructions for:
 - Configuring It
 - Running it
 
-### More Specific Topics (+ sample sub-categories)
-- Versioning: Services, APIs, Systems
-- Common Error Messages/related details
-- Tests
-- Is it a Swift project? Please take a look at Mattt Thompson & Nate Cook's [Swift documentation](http://nshipster.com/swift-documentation/) guide
+
 
 ### TODO  you can view the list of [here](./todo.md).
-
-### Contact
-- Email address
-- Google Group/mailing list (if applicable)
-- IRC or Slack (if applicable)
 
 ### License  [MIT](./LICENSE)
