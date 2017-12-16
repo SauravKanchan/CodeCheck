@@ -14,21 +14,18 @@ https://code-check-csi.herokuapp.com/
 - better user stats with leaderboard and charts
 - User friendly and fully responsive
 
-### Core Technical Concepts/Inspiration
+### Why does it exists
 
-- Why does it exist?
-- Frame your project for the potential user. 
-- Compare/contrast your project with other, similar projects so the user knows how it is different from those projects.
-- Highlight the technical concepts that your project demonstrates or supports. Keep it very brief.
-- Keep it useful.
 
-### Getting Started/Requirements/Prerequisites/Dependencies
-Include any essential instructions for:
-- Getting it
-- Installing It
-- Configuring It
-- Running it
+### Packages/Platforms used
 
+- [Django](https://www.djangoproject.com/)
+- [django-allauth](https://github.com/pennersr/django-allauth)
+- [django-crispy-forms](http://django-crispy-forms.readthedocs.io/en/latest/)
+- [Heroku](https://www.heroku.com/)
+
+
+### How to install/setup
 
 
 ### TODO  you can view the list of [here](./todo.md).
