@@ -15,10 +15,6 @@ https://code-check-csi.herokuapp.com/
 - better user stats with leaderboard and charts
 - User friendly and fully responsive
 
-### Why does it exists
-
-- work pending
-
 
 ### Packages/Platforms used
 
@@ -32,9 +28,8 @@ https://code-check-csi.herokuapp.com/
 
 - work pending
 
-### TODO  you can view the list of [here](./todo.md).
 
-### License  [MIT](./LICENSE)
+### Current Version: 1.0
 
 <img src="images/compiler.PNG" width="850">
 <img src="images/contests.PNG" width="850">
