@@ -37,20 +37,11 @@ Include any essential instructions for:
 - Tests
 - Is it a Swift project? Please take a look at Mattt Thompson & Nate Cook's [Swift documentation](http://nshipster.com/swift-documentation/) guide
 
-### Contributing
-- Contributor Guidelines
-- Code Style/Requirements
-- Format for commit messages
-- Thank you (name contributors)
-
-### TODO
-- Next steps
-- Features planned
-- Known bugs (shortlist)
+### TODO  you can view the list of [here](./todo.md).
 
 ### Contact
 - Email address
 - Google Group/mailing list (if applicable)
 - IRC or Slack (if applicable)
 
-### License
+### License  [MIT](./LICENSE)
