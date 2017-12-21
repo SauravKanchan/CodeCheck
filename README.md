@@ -24,12 +24,9 @@ https://code-check-csi.herokuapp.com/
 - [Heroku](https://www.heroku.com/)
 - [Ace Editor](https://ace.c9.io/)
 
-### How to install/setup
-
-- work pending
+ 
 
 
-### Current Version: 1.0
 
 <img src="images/compiler.PNG" width="850">
 <img src="images/contests.PNG" width="850">
