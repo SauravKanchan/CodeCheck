@@ -7,7 +7,7 @@ body {
 }
 
 body *{
-    font-family: 'Quicksand', sans-serif !important;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #spacing{
@@ -156,11 +156,11 @@ table tr:hover td{
 /* Components that can be reused */
 
 *{
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -ms-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
 }
 
 .btn-primary-outline{
@@ -263,6 +263,23 @@ table tr:hover td{
 }
 .login-signup-container .links .signup-link a{
     margin-left: 4px;
+}
+
+
+.login-signup-container .links .social-login-bar {
+  color: #9E9E9E;
+}
+.login-signup-container .links .social-login-bar a{
+    border-bottom: none;
+    margin: 2rem;
+    color: #42A5F5 !important;
+}
+
+.login-signup-container .links .social-login-bar a:hover{
+    font-size: unset !important;
+    letter-spacing: 0 !important;
+    text-decoration: none;
+    color: #0277BD !important;
 }
 
 /* CSS For Listing and Adding Email Addresses */
