@@ -103,3 +103,6 @@ ENV/
 # mypy
 .mypy_cache/
 codecheck/static/
+codecheck_venv/bin/
+codecheck_venv/
+staticfiles/
