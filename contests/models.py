@@ -9,10 +9,10 @@ from userprofile.models import Profile
 
 class Contest(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField(max_length=1000,blank=True)
+    description = models.TextField(blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
-    image = models.CharField(blank=True,null=True)
+    image = models.CharField(blank=True,null=True,max_length=1000)
 
     def get_duration(self):
         return self.end_date - self.start_date

@@ -7,7 +7,9 @@
                 {% for contest in live_contests %}
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail contest">
-                            {% if contest.image %}                            <img src="">                            {% endif %}
+                            {% if contest.image %}
+                                <img src="{{ contest.image }}">
+                            {% endif %}
                             <div class="caption">
                                 <h3>{{ contest.title }}</h3>
                                 <h5>{{ contest.description }}</h5>
@@ -27,7 +29,9 @@
                 {% for contest in upcoming_contests %}
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail contest">
-                            {% if contest.image %}                            <img src="">                            {% endif %}
+                            {% if contest.image %}
+                                <img src="{{ contest.image }}">
+                            {% endif %}
                             <div class="caption">
                                 <h3>{{ contest.title }}</h3>
                                 <h5>{{ contest.description }}</h5>
@@ -49,7 +53,7 @@
 
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail contest">
-                            {% if contest.image %}                            <img src="">                            {% endif %}
+                            {% if contest.image %}                            <img src="{{ contest.image }}">                            {% endif %}
                             <div class="caption">
                                 <h3>{{ contest.title }}</h3>
                                 <h5>{{ contest.description }}</h5>

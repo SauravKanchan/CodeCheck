@@ -9,8 +9,10 @@
         <div class="row">
             {% for t in track %}
               <div class="col-sm-6 col-md-4">
-                <div class="thumbnail track">
-                  <img src="" >
+                <div class="thumbnail    track">
+                    {% if t.image %}
+                  <img src="{{ t.image }}" >
+                    {% endif %}
                   <div class="caption">
                     <h3>{{ t.title }}</h3>
                     <p><a href="{% url 'track' t.id %}" class="btn btn-primary solve-question-button" role="button">Solve</a></p>

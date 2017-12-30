@@ -4,6 +4,8 @@ from django.conf import settings
 
 class Track(models.Model):
     title = models.CharField(max_length=200)
+    image = models.CharField(max_length=1000,blank=True,null=True)
+
 
     def __str__(self):
         return self.title
