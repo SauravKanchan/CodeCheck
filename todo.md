@@ -4,6 +4,6 @@
 - [ ] Enabling Goggle,Twitter and Facebook login in allauth.
 - [ ] Fix all include tags
 - [ ] Add linebreaks in practice questions
-- [ ] Make email credentials environmental variables.
+- [X] Make email credentials environmental variables.
 - [ ] Plagiarism checker
 - [ ] implement codearena 

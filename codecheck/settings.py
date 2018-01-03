@@ -170,8 +170,8 @@ ACCOUNT_EMAIL_REQUIRED='True'
 
 # gmail smtp settings to send emails
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'csicodecheck@gmail.com' 
-EMAIL_HOST_PASSWORD = 'code@1234'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
