@@ -1,3 +1,3 @@
 release: python manage.py migrate
-web: gunicorn codecheck.wsgi --log-file -
+web: python manage.py compilescss; python manage.py collectstatic --ignore=*.scss --no-input; gunicorn codecheck.wsgi --log-file -
 
