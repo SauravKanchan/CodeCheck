@@ -43,11 +43,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
-    
+    'sass_processor',   
 ]
 
 MIDDLEWARE = [
-
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -58,8 +57,6 @@ MIDDLEWARE = [
 
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'codecheck.middleware.AuthRequiredMiddleware.AuthRequiredMiddleware'
-    
-
 ]
 
 ROOT_URLCONF = 'codecheck.urls'
@@ -132,6 +129,12 @@ STATICFILES_DIRS = [
     os.path.join(STATIC_FILE_DIR_ROOT, 'static'),
 ]
 
+# Adding the sass finder to locate the generated .css file
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
 
 LOGIN_URL = "/accounts/login/"
 LOGOUT_URL = "/accounts/logout/"
@@ -173,3 +176,19 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+LOGGING = { 
+    'version': 1, 
+    'disable_existing_loggers': False, 
+    'handlers': { 
+        'console': { 
+            'class': 'logging.StreamHandler', 
+        }, 
+    }, 
+    'loggers': { 
+        'django': { 
+            'handlers': ['console'], 
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'), 
+        }, 
+    }, 
+} 

@@ -106,3 +106,5 @@ codecheck/static/
 codecheck_venv/bin/
 codecheck_venv/
 staticfiles/
+
+\.DS_Store

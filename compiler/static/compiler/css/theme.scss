@@ -1,0 +1,491 @@
+body {
+  font-family: 'Quicksand', sans-serif !important;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background-color: #ecf0f1;
+  * {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+#spacing {
+  padding-top: 40%;
+}
+
+#footer-compiler {
+  padding: 15px;
+  background-color: #333;
+}
+
+#middle {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+#outermost {
+  background-color: #eee;
+  margin-top: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.language-text {
+  font-size: 15px;
+  margin-top: 13px;
+  margin-bottom: 10px;
+  color: #eee;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
+}
+
+.innermost {
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 80px;
+}
+
+#testcases {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100%;
+}
+
+#custom-check {
+  margin-top: 13px;
+}
+
+#header {
+  border: 1px;
+  background: #333;
+}
+
+#lang-select {
+  background-color: #000;
+}
+
+.button-style {
+  background-color: #4CAF50;
+  border-radius: 5px;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+  border: 1px solid #366624;
+}
+
+#language {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  text-align: left;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase {
+  > p > .btn {
+    margin: 5px 0;
+  }
+  .navbar .container {
+    width: auto;
+  }
+}
+
+.wmd-panel {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+/*Styles for overriding bootstrap list numbering*/
+ol li.list-group-item {
+  list-style: decimal inside;
+  display: list-item;
+}
+
+#testcases {
+  display: none;
+}
+
+#nav-main {
+  background: #199EB8;
+  height: 70px;
+}
+
+#facebook-nav {
+  color: white;
+  margin-right: 40px;
+  padding-top: 30px !important;
+}
+
+#logo {
+  max-height: 30px !important;
+}
+
+.table-fit {
+  width: 1px;
+}
+
+table tr:hover td {
+  background-color: white;
+}
+
+
+/* Styles that can be reused */
+* {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.btn-primary-outline {
+  background: transparent;
+  color: #66BB6A;
+  border: 1px solid #66BB6A;
+  &:hover {
+    background: #66BB6A;
+    color: #F5F5F5;
+    border: 1px solid #66BB6A;
+  }
+}
+
+.solve-question-button {
+  background: #66BB6A;
+  color: #F5F5F5;
+  border: 1px solid #66BB6A;
+  &:hover {
+    background: #66BB6A;
+    color: #F5F5F5;
+    border: 1px solid #66BB6A;
+  }
+}
+
+
+/* Overriding Bootstrap */
+.alert {
+  text-align: center;
+  &.alert-error {
+    background-color: #ef5350;
+    color: #F2F2F2;
+  }
+}
+
+
+/* Styles For Login Page */
+.login-signup-container {
+  text-align: center;
+  max-width: 500px;
+  padding-top: 6%;
+  h1 {
+    font-size: 3.5em;
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+  }
+  * {
+    font-family: 'Quicksand', sans-serif;
+  }
+  .form-group {
+    margin: 30px;
+  }
+  .alert-block {
+    margin: 30px;
+    ul {
+      margin: 0px;
+      -moz-padding-start: 0;
+      -webkit-padding-start: 0;
+    }
+    li {
+      list-style: none;
+    }
+  }
+  input.form-control {
+    font-size: 1.2em;
+    height: auto;
+    padding: 15px;
+    &:focus {
+      border-color: #26C6DA;
+    }
+  }
+  div#div_id_remember {
+    font-size: 1.1em;
+  }
+  .form-group .control-label {
+    display: none;
+  }
+  .login-signup-button-container {
+    margin: 30px;
+  }
+  .login-signup-button {
+    padding: 15px;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: #66BB6A;
+    border-color: #66BB6A !important;
+    &:hover {
+      font-size: 1.5em;
+      color: #EEEEEE;
+      letter-spacing: 2px;
+      background-color: #66BB6A;
+    }
+  }
+  .links {
+    div {
+      margin: 25px;
+      color: #9E9E9E !important;
+      a {
+        color: #007bff !important;
+        text-decoration: none;
+        border-bottom: 1px dotted #007bff;
+        &:hover {
+          color: #1976D2 !important;
+          font-size: 1.1em;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .signup-link a {
+      margin-left: 4px;
+    }
+    .social-login-bar {
+      color: #9E9E9E;
+      a {
+        border-bottom: none;
+        margin: 2rem;
+        color: #42A5F5 !important;
+        &:hover {
+          font-size: unset !important;
+          letter-spacing: 0 !important;
+          text-decoration: none;
+          color: #0277BD !important;
+        }
+      }
+    }
+  }
+}
+
+
+/* Styles For Listing and Adding Email Addresses */
+.email-addresses-container {
+  * {
+    font-family: 'Quicksand', sans-serif;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  h1 {
+    margin-bottom: 1em;
+  }
+  .email-addresses-table {
+    margin: 15px;
+    font-size: 1.1em;
+    thead {
+      margin-bottom: 30px;
+      th {
+        font-weight: bolder;
+        font-size: 1.3em;
+        text-align: center;
+      }
+    }
+    tbody {
+      &:before {
+        content: "-";
+        display: block;
+        line-height: 1em;
+        color: transparent;
+      }
+      tr:hover td {
+        background-color: #EEEEEE;
+      }
+      td {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+  .associated-email-address .email-radio-input {
+    display: none;
+  }
+  button {
+    background-color: transparent;
+    margin: auto 5px;
+  }
+  .email-address-action-buttons button.make-primary, .add-email-button {
+    border-color: #66BB6A;
+    color: #66BB6A;
+  }
+  .email-address-action-buttons button.make-primary:hover, .add-email-button:hover {
+    background-color: #66BB6A;
+    color: #F5F5F5;
+  }
+  .email-address-action-buttons button {
+    &.send-verification {
+      border-color: #26C6DA;
+      color: #26C6DA;
+      &:hover {
+        background-color: #26C6DA;
+        color: #F5F5F5;
+      }
+    }
+    &.remove-email {
+      border-color: #ef5350;
+      color: #ef5350;
+      &:hover {
+        background-color: #ef5350;
+        color: #F5F5F5;
+      }
+    }
+  }
+  form.add_email {
+    #div_id_email {
+      width: 100%;
+      > label {
+        display: none;
+      }
+      input {
+        font-size: 1.3em;
+        height: auto;
+      }
+    }
+    .add-email-button {
+      width: 100%;
+      font-size: 1.3em;
+      margin: 5px auto;
+    }
+  }
+}
+
+
+/* Styles For List of Questions */
+.question-list {
+  margin-top: 5em;
+  list-style: none;
+}
+
+.question-row {
+  display: table;
+  > {
+    div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .question-name {
+      width: 100%;
+    }
+  }
+}
+
+
+/* Common Styles for List of Questions and Practice > List of Tracks */
+.question, .track, .contest {
+  padding: 25px;
+  margin-bottom: 50px;
+  background: transparent !important;
+  font-size: 1.3em;
+  font-weight: bolder;
+  border: 1px solid #26C6DA;
+}
+
+.question:hover, .track:hover, .contest:hover {
+  background: #40C4FF !important;
+  border-color: #40C4FF;
+}
+
+.question:hover .question-name span, .track:hover h3, .contest:hover h3 {
+  color: #F5F5F5;
+}
+
+.question .question-name span, .track h3, .contest h3 {
+  color: #26C6DA;
+}
+
+.solve-question-button:hover {
+  background: #00C853;
+  border-color: #00C853;
+}
+
+
+/* CSS For Practice > List of Tracks and Contests > List of Contests */
+.tracks-container .row .col-md-4, .contests-container .row .col-md-4 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.tracks-container, .contests-container {
+  margin-top: 4em;
+}
+
+.tracks-container .primary-heading, .contests-container .primary-heading {
+  margin-bottom: 2em;
+}
+
+.view-leaderboard-link {
+  margin-bottom: 0;
+  text-decoration: none !important;
+  &:hover {
+    letter-spacing: 2px;
+  }
+}
+
+.track h3, .contest h3 {
+  margin-bottom: 2em;
+}
+
+.track p a, .contest p a {
+  margin-top: 2em;
+  width: 100%;
+}
+
+
+/* Styles For Leaderboard */
+.leaderboard-container {
+  margin-top: 4em;
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+  }
+}
+
+.leaderboard-table {
+  tr:hover td {
+    background: #E8F5E9;
+  }
+  td {
+    padding: 1em !important;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  th {
+    padding: 1em !important;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4em;
+  }
+  td {
+    font-size: 1.2em;
+    a {
+      text-decoration: none !important;
+      &:hover {
+        color: #26C6DA;
+      }
+    }
+  }
+}
