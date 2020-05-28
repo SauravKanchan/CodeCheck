@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'core',
 
     'rest_auth',
-
+    'drf_yasg',
 ]
 
 SITE_ID = 1
